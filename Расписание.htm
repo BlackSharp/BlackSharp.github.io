@@ -370,18 +370,18 @@ function bind(){
 	toggle_week_day(document.getElementById("week_days_w"+(n-1)));
 	}
 
-	for(var i = 0;i<7;i++){
+	for(var i = 0;i<6;i++){
 	document.getElementById("week_days").cells[i].addEventListener("click",function(e){
 	toggle_week_day(e.target);
 	})
 	}
-	ts[7] = [];
+	ts[6] = [];
 	
 	for(z = 0;z<alarms.length/2;z++){
-	ts[7][z] = [];
-	ts[7][z][0] = ""+alarms[z*2][0]+":"+alarms[z*2][1]+" - "+alarms[(z*2)+1][0]+":"+alarms[(z*2)+1][1];
-	ts[7][z][1] = "";
-	ts[7][z][2] = "";
+	ts[6][z] = [];
+	ts[6][z][0] = ""+alarms[z*2][0]+":"+alarms[z*2][1]+" - "+alarms[(z*2)+1][0]+":"+alarms[(z*2)+1][1];
+	ts[6][z][1] = "";
+	ts[6][z][2] = "";
 	}
 	get_alarm();do_cd();
 	setInterval('do_cd()', 1000);
@@ -407,7 +407,7 @@ function toggle_week_day(_obj){
 		_obj.className = _obj.className + " active";
 
 
-		if(_obj.getAttribute("w") == "7"){
+		if(_obj.getAttribute("w") == "6"){
 		document.getElementsByClassName("lists")[0].rows[1].cells[1].innerHTML = "Звонки";
 		document.getElementsByClassName("lists")[0].rows[1].cells[2].innerHTML = "";
 		}else{
@@ -416,7 +416,7 @@ function toggle_week_day(_obj){
 		}
 
 	
-		for(l = 0;l<alarms.length/2;l++){
+		for(l = 0;l<alarms.length/2;l++){            
 			document.getElementsByClassName("lists")[0].rows[l+2].cells[2].innerHTML = ts[_obj.getAttribute("w")][l][2];
 			document.getElementsByClassName("lists")[0].rows[l+2].cells[2].setAttribute("title",ts[_obj.getAttribute("w")][l][1]);
 			document.getElementsByClassName("lists")[0].rows[l+2].cells[1].innerHTML = ts[_obj.getAttribute("w")][l][0];
@@ -1182,7 +1182,7 @@ animation:cricle 1s linear 0s infinite;
 }</style></head>
 <body onload="bind();">
 <div id="loading_div" style="display: none;"><div></div><span style="top:50%;left:0px;width:100%;position:fixed;margin-top:40px;" id="loading_div_text">загрузка приложения</span></div>
-<div class="top"><a class="button" href="http://k-94.ru/" id="help_button" style="background-image:url(&quot;//k-94.ru/assets/logo.svg&quot;);left:0px;"></a><div class="button" id="back_button" t="Расписание  группы" onclick="show('all');" style="background-image:url(&quot;http://k-94.ru/assets/images/close.png&quot;);right:0px;display:none;"></div><span id="group_title"> Расписание  группы </span><div class="button" onclick="show('settings');" id="settings_button" t="Настройки" style="background-image:url(&quot;http://k-94.ru/assets/images/settings.png&quot;);right:0px;"></div></div>
+<div class="top"><a class="button" href="http://k-94.ru/" id="help_button" style="background-image:url(&quot;//k-94.ru/assets/logo.svg&quot;);left:0px;"></a><div class="button" id="back_button" t="Расписание  группы" onclick="show('all');" style="background-image:url(&quot;http://k-94.ru/assets/images/close.png&quot;);right:0px;display:none;"></div><span id="group_title"> Расписание  группы </span><div class="button" onclick="show('settings');" id="settings_button" t="Настройки" style="display:none;"></div></div>
  <span id="body_timer" style="display:none;">
 	<div class="help" id="count_time" style="font-size: 130px;line-height: 385px;background: #212026;text-shadow:0px 0px 10px #000;">
 	00:00
@@ -1218,15 +1218,16 @@ animation:cricle 1s linear 0s infinite;
 <td w="3" id="week_days_w2">СР</td>
 <td w="4" id="week_days_w3">ЧТ</td>
 <td w="5" id="week_days_w4">ПТ</td>
-<td w="6" id="week_days_w5">СБ</td>
-<td w="7" id="week_days_w6">ЗВ</td></tr>
-<tr><td>#</td><td colspan="5">Урок</td><td>Каб</td></tr>
-<tr><td>1</td><td colspan="5">МДК 01.01 Осн.экспл.тех   обслуж.и ремонта СЭУ</td><td onclick="kalert(this.title);" title="Плотников А.В.">54</td></tr>
-<tr><td>2</td><td colspan="5">МДК 02.01 Безоп.жиз. на судне и трансп.безоп</td><td onclick="kalert(this.title);" title="Козловский В.И.">68</td></tr>
-<tr><td>3</td><td colspan="5">МДК 01.01 Осн.экспл.тех   обслуж.и ремонта СЭУ</td><td onclick="kalert(this.title);" title="Плотников А.В.">54</td></tr>
-<tr><td>4</td><td colspan="5">МДК 01.01 Осн.экспл.тех   обслуж.и ремонта СЭУ</td><td onclick="kalert(this.title);" title="Плотников А.В.">54</td></tr>
-<tr><td>5</td><td colspan="5">МДК 01.01 Осн.экспл.тех   обслуж.и ремонта СЭУ</td><td onclick="kalert(this.title);" title="Плотников А.В.">54</td></tr>
-<tr><td>6</td><td colspan="5">МДК 01.01 Осн.экспл.тех   обслуж.и ремонта СЭУ</td><td onclick="kalert(this.title);" title="Плотников А.В.">54</td></tr>
+<td w="6" id="week_days_w6">ЗВ</td></tr>
+<tr><td>#</td><td colspan="4">Урок</td><td>Каб</td></tr>
+<tr><td>1</td><td colspan="4">МДК 01.01 Осн.экспл.тех   обслуж.и ремонта СЭУ</td><td onclick="kalert(this.title);" title="Плотников А.В.">54</td></tr>
+<tr><td>2</td><td colspan="4">МДК 02.01 Безоп.жиз. на судне и трансп.безоп</td><td onclick="kalert(this.title);" title="Козловский В.И.">68</td></tr>
+<tr><td>3</td><td colspan="4">МДК 01.01 Осн.экспл.тех   обслуж.и ремонта СЭУ</td><td onclick="kalert(this.title);" title="Плотников А.В.">54</td></tr>
+<tr><td>4</td><td colspan="4">МДК 01.01 Осн.экспл.тех   обслуж.и ремонта СЭУ</td><td onclick="kalert(this.title);" title="Плотников А.В.">54</td></tr>
+<tr><td>5</td><td colspan="4">МДК 01.01 Осн.экспл.тех   обслуж.и ремонта СЭУ</td><td onclick="kalert(this.title);" title="Плотников А.В.">54</td></tr>
+<tr><td>6</td><td colspan="4">МДК 01.01 Осн.экспл.тех   обслуж.и ремонта СЭУ</td><td onclick="kalert(this.title);" title="Плотников А.В.">54</td></tr>
+<tr><td>7</td><td colspan="4">МДК 01.01 Осн.экспл.тех   обслуж.и ремонта СЭУ</td><td onclick="kalert(this.title);" title="Плотников А.В.">54</td></tr>
+<tr><td>8</td><td colspan="4">МДК 01.01 Осн.экспл.тех   обслуж.и ремонта СЭУ</td><td onclick="kalert(this.title);" title="Плотников А.В.">54</td></tr>
 </tbody></table>
 </span>
 <div class="copy"> <a href="https://flyink.ru/" style="color: inherit;text-decoration: underline;">FlyInk</a> © 2014 г.</div>
