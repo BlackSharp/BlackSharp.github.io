@@ -10,20 +10,20 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#383840">
 
-<link rel="apple-touch-icon" sizes="57x57" href="http://k-94.ru/apps/lessons/icons/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="http://k-94.ru/apps/lessons/icons/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="http://k-94.ru/apps/lessons/icons/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="http://k-94.ru/apps/lessons/icons/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="http://k-94.ru/apps/lessons/icons/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="http://k-94.ru/apps/lessons/icons/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="http://k-94.ru/apps/lessons/icons/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="http://k-94.ru/apps/lessons/icons/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="http://k-94.ru/apps/lessons/icons/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192" href="http://k-94.ru/apps/lessons/icons/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://k-94.ru/apps/lessons/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="http://k-94.ru/apps/lessons/icons/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="http://k-94.ru/apps/lessons/icons/favicon-16x16.png">
-<link rel="manifest" href="http://k-94.ru/apps/lessons/icons/manifest.json">
+<link rel="apple-touch-icon" sizes="57x57" href="Расписание_files/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="Расписание_files/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="Расписание_files/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="Расписание_files/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="Расписание_files/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="Расписание_files/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="Расписание_files/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="Расписание_files/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="Расписание_files/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="Расписание_files/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="Расписание_files/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="Расписание_files/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Расписание_files/favicon-16x16.png">
+<link rel="manifest" href="Расписание_files/manifest.json">
 <meta name="msapplication-TileColor" content="#383840">
 <meta name="msapplication-TileImage" content="/apps/lessons/icons/ms-icon-144x144.png">
 <meta name="theme-color" content="#383840">
@@ -361,7 +361,7 @@ function save_duration(_duration,_rec){
 function bind(){
     var d = new Date();
     var n = d.getDay();
-	if(typeof ts =="undefined")document.body.innerHTML = "<h2>Расписание на эту группу не найдено.<br>Обратитесь к <a href='http://vk.com/flyink'>администратору.</a><h2>";
+	if(typeof ts =="undefined")document.body.innerHTML = "<h2>Расписание на эту группу не найдено.<br>Обратитесь к <a href='https://vk.com/dom534412'>администратору.</a><h2>";
 	
 	save_duration(Number(getCookie("duration"))||0,"no")
 	if(n==0){
@@ -631,8 +631,7 @@ animation:cricle 1s linear 0s infinite;
 0%   {-webkit-transform: rotateZ(0grad);}
 100%   {-webkit-transform: rotateZ(390grad);}
 }
-</style>
-	<link rel="manifest" href="http://k-94.ru/l/mtc/259/manifest.json">
+</style>	
 	<meta name="msapplication-TileColor" content="#1f2026">
 	<meta name="theme-color" content="#1f2026">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -1182,7 +1181,7 @@ animation:cricle 1s linear 0s infinite;
 }</style></head>
 <body onload="bind();">
 <div id="loading_div" style="display: none;"><div></div><span style="top:50%;left:0px;width:100%;position:fixed;margin-top:40px;" id="loading_div_text">загрузка приложения</span></div>
-<div class="top"><a class="button" href="http://k-94.ru/" id="help_button" style="background-image:url(&quot;//k-94.ru/assets/logo.svg&quot;);left:0px;"></a><div class="button" id="back_button" t="Расписание  группы" onclick="show('all');" style="background-image:url(&quot;http://k-94.ru/assets/images/close.png&quot;);right:0px;display:none;"></div><span id="group_title"> Расписание  группы </span><div class="button" onclick="show('settings');" id="settings_button" t="Настройки" style="display:none;"></div></div>
+<div class="top"><a class="button" href="#" id="help_button" style="background-image:url(&quot;//k-94.ru/assets/logo.svg&quot;);left:0px;"></a><div class="button" id="back_button" t="Расписание  группы" onclick="show('all');" style="background-image:url(&quot;https://blacksharp.github.io/%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5_files/close.png&quot;);right:0px;display:none;"></div><span id="group_title"> Расписание  группы </span><div class="button" onclick="show('settings');" id="settings_button" t="Настройки" style="display:none;"></div></div>
  <span id="body_timer" style="display:none;">
 	<div class="help" id="count_time" style="font-size: 130px;line-height: 385px;background: #212026;text-shadow:0px 0px 10px #000;">
 	00:00
@@ -1195,12 +1194,7 @@ animation:cricle 1s linear 0s infinite;
 		<span id="time_s">+00:00</span>
 		<button onclick="save_duration(duration + 3600);">+60:00</button><button onclick="save_duration(duration + 60);">+01:00</button><button onclick="save_duration(duration + 10);">+00:10</button><button onclick="save_duration(duration + 1);">+00:01</button><br><button style="width:252px;" onclick="save_duration(0);">Сброс</button><br><br>
 		<hr>
-		<br>Автор: <a href="http://vk.com/flyink">Евгений Котляров</a><br>
-		<br>
-		Если вместо кабинета написано "--" , значит он не указан в расписании. 
-		<br><br> 
-		PS: Если нашли ошибку или хотите сделать расписание для своей группы - напишите <a href="http://vk.com/flyink">мне</a>.<br><br> 
-
+		
 </span>
 
 
@@ -1230,7 +1224,7 @@ animation:cricle 1s linear 0s infinite;
 <tr><td>8</td><td colspan="4">МДК 01.01 Осн.экспл.тех   обслуж.и ремонта СЭУ</td><td onclick="kalert(this.title);" title="Плотников А.В.">54</td></tr>
 </tbody></table>
 </span>
-<div class="copy"> <a href="https://flyink.ru/" style="color: inherit;text-decoration: underline;">FlyInk</a> © 2014 г.</div>
+<div class="copy"> <a href="https://blacksharp.github.io/%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5.htm" style="color: inherit;text-decoration: underline;">Blak</a> © 2017 г.</div>
 <div id="kalert"></div>
 
 </body></html>
