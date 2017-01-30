@@ -148,6 +148,7 @@
         function bind() {
             var d = new Date();
             var n = d.getDay();
+			
             if (typeof ts == "undefined") document.body.innerHTML =
                 "<h2>Расписание на эту группу не найдено.<br>Обратитесь к <a href='https://vk.com/dom534412'>администратору.</a><h2>";
 
@@ -173,8 +174,8 @@
                 ts[6][z][2] = "";
             }
             get_alarm();
-            do_cd();
-            setInterval('do_cd()', 1000);
+          
+            
             setInterval('get_alarm();', 5000);
             setTimeout('document.getElementById("loading_div").style.display = "none";', 500);
 
