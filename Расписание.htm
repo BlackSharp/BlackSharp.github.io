@@ -1,771 +1,623 @@
 <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
-<html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="format-detection" content="telephone=no">
+<html>
 
-<meta name="apple-mobile-web-app-title" content="Расписание занятий.">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="application-name" content="Расписание">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#383840">
-
-<link rel="apple-touch-icon" sizes="57x57" href="Расписание_files/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="Расписание_files/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="Расписание_files/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="Расписание_files/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="Расписание_files/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="Расписание_files/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="Расписание_files/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="Расписание_files/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="Расписание_files/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192" href="Расписание_files/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="Расписание_files/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="Расписание_files/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="Расписание_files/favicon-16x16.png">
-<link rel="manifest" href="Расписание_files/manifest.json">
-<meta name="msapplication-TileColor" content="#383840">
-<meta name="msapplication-TileImage" content="/apps/lessons/icons/ms-icon-144x144.png">
-<meta name="theme-color" content="#383840">
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
-<title>Расписание.</title>
-<script src="%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5_files/cookie.js" type="text/javascript"></script><style type="text/css">
-:root .banner_box,
-:root .adv,
-:root .adsbygoogle,
-:root #content > #right > .dose > .dosesingle,
-:root #content > #center > .dose > .dosesingle,
-:root td[id^="advtd"],
-:root img[src*="rmbn.ru/banners/"],
-:root div[id^="teaser_70"],
-:root div[id^="smi2adblock"],
-:root div[id^="lp_banner_"],
-:root div[id^="cpa_rotator_block_"],
-:root div[id^="CGCandy"],
-:root div[id^="AdFox_banner_"],
-:root [name="Ad_Image"],
-:root div[id^="vk_ads_"],
-:root object[data^="blob"],
-:root object[data*="ads.com/clk.swf"],
-:root img[width="728"][height="90"],
-:root img[width="468"][height="60"],
-:root img[width="160"][height="600"],
-:root img[width="120"][height="600"],
-:root iframe[width="728"][height="90"],
-:root div[id^="trafmag_"],
-:root div[id^="tizerws_"],
-:root div[id^="smi2adblock_"],
-:root div[id^="sblock_inform_"],
-:root div[id^="rtn4p"],
-:root div[id^="news_nest_net_ru"],
-:root div[id^="news_nest_msk_ru"],
-:root div[id^="news_2xclick_ru_"],
-:root div[id^="gnezdo_ru_"],
-:root div[id^="cpa_rotator_block"],
-:root div[id^="b_tz_"],
-:root div[id^="advertur_"],
-:root div[id^="ads_games_"],
-:root div[id^="admixer_async_"],
-:root div[id*="Teaser_Block"],
-:root div[id*="ScriptRoot"],
-:root div[id$="notifiers_wrap"],
-:root div[class^="block_fortress"],
-:root div[class*="td-a-rec-id-custom_ad"],
-:root div[class*="notifier_baloon_"],
-:root a[onclick*="trtkp.ru"],
-:root [href^="http://amigo-browser.ru"][href*="token"],
-:root a[href="http://advert.mirtesen.ru/"],
-:root a[href*="zozoter.ru"],
-:root a[href*="zdravo-med.ru"],
-:root a[href*="verismediya.ru/sb/clk/"],
-:root a[href*="ultrabit.ws"],
-:root a[href*="trtkp.ru"],
-:root a[href*="trklp.ru"],
-:root a[href*="trk-1.com"],
-:root a[href*="tptrk.ru"],
-:root a[href*="thor-media.ru/click/ad"],
-:root a[href*="teasermoney.com"],
-:root a[href*="tdstrk.ru"],
-:root a[href*="shakesin.com"],
-:root a[href*="shakesclick.com"],
-:root a[href*="sapmedia.ru"],
-:root a[href*="runetki.com"],
-:root a[href*="rootmedia.cc"],
-:root a[href*="rexchange.begun.ru/rclick?"],
-:root a[href*="recreativ.ru"],
-:root a[href*="re-directme.com"],
-:root a[href*="promoheads.com"],
-:root a[href*="problogrus.ru"],
-:root a[href*="novostimira.biz"],
-:root a[href*="netcrys.com"],
-:root a[href*="navaxudoru.com"],
-:root a[href*="mixadvert.com"],
-:root a[href*="medicinetizer.ru"],
-:root a[href*="marketgid.com/"],
-:root a[href*="lifenews24x7.ru"],
-:root a[href*="lifebloggersz.ru"],
-:root a[href*="kodielinktrust.ru"],
-:root a[href*="kma1.biz"],
-:root a[href*="kinqon.ru"],
-:root a[href*="joycasino.com/?partner="],
-:root a[href*="intovarro.ru"],
-:root a[href*="https://relap.io/r?"],
-:root a[href*="goodtrack.ru"],
-:root a[href*="go.ad2up.com"],
-:root a[href*="globalteaser.ru"],
-:root a[href*="ftpglst.com"],
-:root a[href*="flylinks.pw"],
-:root a[href*="films.ws"],
-:root a[href*="filebase.me"],
-:root a[href*="ex.24smi.info"],
-:root a[href*="cpl1.ru"],
-:root a[href*="cpaggetti.ru"],
-:root a[href*="cpaggetti.com"],
-:root a[href*="cpagettio.com"],
-:root a[href*="cpagette.com"],
-:root a[href*="cmsmodnews.com"],
-:root a[href*="catcut.net"],
-:root a[href*="bubblesmedia.ru/sb/clk/"],
-:root a[href*="bgrndi.com"],
-:root a[href*="awesomeredirector"],
-:root a[href*="autoteaser.net"],
-:root a[href*="amigo-biz.ru/ads/click"],
-:root a[href*="amgfile.ru"],
-:root a[href*="advertwebgid.ru"],
-:root a[href*="ads2-adnow.com"],
-:root a[href*="admitlead.ru/sb/clk/"],
-:root a[href*="actionteaser.ru"],
-:root a[href*="/vkout.ru"],
-:root a[href*="//ukrmedia.center/"],
-:root a[href*=".converteam.online"],
-:root [onclick*="mixadvert.com"],
-:root [href*="driftawayforfun.com"],
-:root [data-link*="amigo-browser.ru/dkit-"],
-:root DIV[id^="DIV_NNN_"],
-:root XK-COOKIE-POLICY-WARNING,
-:root div[data-module="cookie_banner"],
-:root form[action="http://feedburner.google.com/fb/a/mailverify"],
-:root div[class^="popupally-pro"],
-:root a[href="http://www.twellow.com/"],
-:root a[href="http://microbuttons.wordpress.com"],
-:root KNO-SHARE-BUTTON,
-:root FB-LIKE-FLYOUT,
-:root iframe[src^="http://www.facebook.com/plugins/recommendations.php?"],
-:root iframe[src^="http://www.facebook.com/plugins/likebox.php?"],
-:root iframe[src^="http://www.facebook.com/plugins/activity.php?"],
-:root div[id^="simple_tweet_widget"],
-:root div[id^="pw_widget_"],
-:root div[id^="gigya_share_button"],
-:root div[id^="digg-widget-"],
-:root div[data-jsonurl^="/nfl-assets/data/twitter/"],
-:root a[rel="share-on-twitter"],
-:root a[rel="share-on-facebook"],
-:root a[name="sharethis"],
-:root [href^="//pinterest.com/pin/create/button/?"],
-:root a[href="http://www.simplesharebuttons.com"],
-:root a[href="http://www.facebook.com/sharer.php"],
-:root a[href="http://www.delicious.com/save"],
-:root a[href="http://www.addtoany.com/share_save"],
-:root a[href="http://twitter.com/share"],
-:root a[href="http://delicious.com/save"],
-:root a[href="http://del.icio.us/post"],
-:root a[href*="facebook.com/sharer/sharer.php?"],
-:root a[data-tm-ref-type-id="Follow-on-YouTube"],
-:root a[data-tm-ref-type-id="Follow-on-Facebook"],
-:root [target="socialbookmark"],
-:root [name="fb_share"],
-:root [id^="gigya_inline_share_"],
-:root [href="http://www.addthis.com/bookmark.php"],
-:root [class^="social_button_"],
-:root marquee,
-:root div[style*="url(\"http://vk.com/images/upload.gif\")"],
-:root div[id^="vk_like"],
-:root div[id^="vk_group"],
-:root div[id^="vk_comments"],
-:root [href^="https://connect.ok.ru/dk?st.cmd="][href*="share"],
-:root div[id^="zergnet-widget-"],
-:root div[id^="mainads"],
-:root iframe[src^="http://static.mozo.com.au/strips/"],
-:root AMP-AD,
-:root [onclick*="content.ad/"],
-:root a[href*=".trust.zone"],
-:root p[id^="div-gpt-ad-"],
-:root input[onclick^="window.open('http://www.friendlyduck.com/AF_"],
-:root input[onclick^="window.open('http://www.FriendlyDuck.com/AF_"],
-:root img[alt^="Fuckbook"],
-:root iframe[src^="http://cdn2.adexprt.com/"],
-:root iframe[src^="http://cdn1.adexprt.com/"],
-:root iframe[src^="http://ad.yieldmanager.com/"],
-:root iframe[id^="google_ads_iframe"],
-:root iframe[id^="google_ads_frame"],
-:root div[itemtype="http://www.schema.org/WPAdBlock"],
-:root div[id^="proadszone-"],
-:root div[id^="google_dfp_"],
-:root div[id^="dmRosAdWrapper"],
-:root div[id^="div_openx_ad_"],
-:root div[id^="div_ad_stack_"],
-:root div[id^="div-gpt-ad"],
-:root div[id^="div-adtech-ad-"],
-:root div[id^="dfp-slot-"],
-:root div[id^="dfp-ad-"],
-:root div[id^="cns_ads_"],
-:root div[id^="ads250_250-widget"],
-:root div[id^="adrotate_widgets-"],
-:root div[id^="acm-ad-tag-"],
-:root div[id^="YFBMSN"],
-:root div[id^="MarketGid"],
-:root div[id^="ADV-SLOT-"],
-:root div[class^="gemini-ad"],
-:root aside[id^="div-gpt-ad"],
-:root a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"],
-:root a[target="_blank"][href^="http://api.taboola.com/"],
-:root a[style="display:block;width:300px;min-height:250px"][href^="http://li.cnet.com/click?"],
-:root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"],
-:root a[onmousedown^="this.href='http://staffpicks.outbrain.com/network/redir?"][target="_blank"],
-:root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"],
-:root a[onmousedown^="this.href='/wp-content/embed-ad-content/"],
-:root [href^="http://taboola-"][href*="/redirect.php?app.type="],
-:root [href^="http://games.ucoz.ru/"][target="_blank"],
-:root [href^="//t.MtagMonetizationA.com/"],
-:root [href^="//srv.buysellads.com/"],
-:root [href^="//api.ad-goi.com/"],
-:root [href^="//ads.ad-center.com/"],
-:root [href^="//adbit.co/?a=Advertise&"],
-:root a[href*="letsadvertisetogether.com"],
-:root a[href*="googleme.eu"],
-:root a[href*="friendlyduck.com"],
-:root a[href*="emprestimo.eu"],
-:root a[href*="ad2upapp.com/"],
-:root a[href*="=Adtracker"],
-:root a[href*="/cmd.php?ad="],
-:root a[href*="/adrotate-out.php?"],
-:root a[href*=".qertewrt.com/"],
-:root a[href*=".adk2x.com/"],
-:root a[href$="/vghd.shtml"],
-:root a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"],
-:root a[data-url^="http://paid.outbrain.com/network/redir?"],
-:root a[data-redirect^="this.href='http://paid.outbrain.com/network/redir?"],
-:root a[data-obtrack^="http://paid.outbrain.com/network/redir?"],
-:root [onclick^="window.open('http://adultfriendfinder.com/search/"],
-:root [lazy-ad="lefttop_banner"],
-:root A[href="http://goo.gl/jQ9bcz"],
-:root A[href*="googleme.eu"],
-:root A[href*="emprestimo.eu"],
-:root .pluso,
-:root #vk_like
-{ display: none !important; }</style><style type="text/css">img[src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="],
-iframe[src="http://vk.com/widget_comments.php?app=2973148&width=1413px&_ver=1&limit=20&height=0&mini=auto&norealtime=0&page=0&status_publish=1&attach=&url=http%3A%2F%2Fk-94.ru%2Fp%2Femoji_new%2F&title=New.%20%D0%9A%D0%BE%D0%B4%D1%8B%20%D1%81%D0%BC%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%20Emoji.&description=%D0%92%20%D0%B4%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9%20%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B5%20%D0%B2%D1%8B%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D1%8B%20%D0%BA%D0%BE%D0%B4%D1%8B%20%D0%B2%D1%81%D0%B5%D1%85%20%D1%81%D0%BC%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5%20%D1%8F%20%D0%BD%D0%B0%D1%88%D0%B5%D0%BB%20%D0%92%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%B5.&image=%2Fassets%2Fimages%2Fbird-w-ns.png&159eb372e50"],
-iframe[src="http://vk.com/widget_like.php?app=2973148&width=100%&_ver=1&page=0&url=http%3A%2F%2Fk-94.ru%2Fp%2Femoji_new%2F&type=button&verb=0&color=&title=New.%20%D0%9A%D0%BE%D0%B4%D1%8B%20%D1%81%D0%BC%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%20Emoji.&description=%D0%92%20%D0%B4%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9%20%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B5%20%D0%B2%D1%8B%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D1%8B%20%D0%BA%D0%BE%D0%B4%D1%8B%20%D0%B2%D1%81%D0%B5%D1%85%20%D1%81%D0%BC%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5%20%D1%8F%20%D0%BD%D0%B0%D1%88%D0%B5%D0%BB%20%D0%92%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%B5.&image=%2Fassets%2Fimages%2Fbird-w-ns.png&text=&h=22&height=22&159eb372e51"]
-{display:none !important;}</style><style>@media print {#ghostery-purple-box {display:none !important}}</style>
-<script src="%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5_files/259.js" type="text/javascript"></script>
-<script src="%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5_files/mtc.js" type="text/javascript"></script>
-<script>
-
-function vibrate(val){
-if("vibrate" in navigator) return navigator.vibrate(val);
-if("oVibrate" in navigator) return navigator.oVibrate(val);
-if("mozVibrate" in navigator) return navigator.mozVibrate(val);
-if("webkitVibrate" in navigator) return navigator.webkitVibrate(val);
-}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="Расписание занятий.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="application-name" content="Расписание">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#383840">
+    <link rel="apple-touch-icon" sizes="57x57" href="Расписание_files/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="Расписание_files/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="Расписание_files/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="Расписание_files/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="Расписание_files/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="Расписание_files/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="Расписание_files/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="Расписание_files/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Расписание_files/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="Расписание_files/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Расписание_files/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="Расписание_files/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Расписание_files/favicon-16x16.png">
+    <link rel="manifest" href="Расписание_files/manifest.json">
+    <meta name="msapplication-TileColor" content="#383840">
+    <meta name="msapplication-TileImage" content="/apps/lessons/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#383840">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Расписание.</title>
+    <script src="Расписание_files/cookie.js" type="text/javascript"></script>
+    <script src="Расписание_files/259.js" type="text/javascript"></script>
+    <script src="Расписание_files/mtc.js" type="text/javascript"></script>
+    <script>
+        function vibrate(val) {
+            if ("vibrate" in navigator) return navigator.vibrate(val);
+            if ("oVibrate" in navigator) return navigator.oVibrate(val);
+            if ("mozVibrate" in navigator) return navigator.mozVibrate(val);
+            if ("webkitVibrate" in navigator) return navigator.webkitVibrate(val);
+        }
 
 
 
-function convert_to_time(secs,_mat){
-	if (secs < 0){
-		mat = "-";
-		secs = -secs;
-	}else{
-		mat = "+";
-	}
-	if(_mat == true)mat = "";
-	secs = parseInt(secs);	
-	hh = secs / 3600;	
-	hh = parseInt(hh);	
-	mmt = secs - (hh * 3600);	
-	mm = mmt / 60;	
-	mm = parseInt(mm);	
-	ss = mmt - (mm * 60);	
-		
-	if (hh > 23)	
-	{	
-	   dd = hh / 24;	
-	   dd = parseInt(dd);	
-	   hh = hh - (dd * 24);	
-	} else { dd = 0; }	
-		
-	if (ss < 10) { ss = "0"+ss; }	
-	if (mm < 10) { mm = "0"+mm; }	
-	if (hh < 10) { hh = "0"+hh; }
-	
+        function convert_to_time(secs, _mat) {
+            if (secs < 0) {
+                mat = "-";
+                secs = -secs;
+            } else {
+                mat = "+";
+            }
+            if (_mat == true) mat = "";
+            secs = parseInt(secs);
+            hh = secs / 3600;
+            hh = parseInt(hh);
+            mmt = secs - (hh * 3600);
+            mm = mmt / 60;
+            mm = parseInt(mm);
+            ss = mmt - (mm * 60);
 
-	if(hh>0){
-	return (mat+hh+":"+mm+":"+ss);
-	}else{
-	return (mat+mm+":"+ss);	
-	}
-}
+            if (hh > 23) {
+                dd = hh / 24;
+                dd = parseInt(dd);
+                hh = hh - (dd * 24);
+            } else {
+                dd = 0;
+            }
+
+            if (ss < 10) {
+                ss = "0" + ss;
+            }
+            if (mm < 10) {
+                mm = "0" + mm;
+            }
+            if (hh < 10) {
+                hh = "0" + hh;
+            }
+
+
+            if (hh > 0) {
+                return (mat + hh + ":" + mm + ":" + ss);
+            } else {
+                return (mat + mm + ":" + ss);
+            }
+        }
 
 
 
 
-function show(_win){
-	document.getElementById("body_all").style.display = "none";
-	document.getElementById("body_settings").style.display = "none";
-	document.getElementById("body_timer").style.display = "none";
-	document.getElementById("body_"+_win).style.display = "block";
+        function show(_win) {
+            document.getElementById("body_all").style.display = "none";
+            document.getElementById("body_settings").style.display = "none";
+            document.getElementById("body_timer").style.display = "none";
+            document.getElementById("body_" + _win).style.display = "block";
 
-	document.getElementById("group_title").innerHTML = event.target.getAttribute("t");
-
-
-	if(_win !== "all"){
-		document.getElementById("settings_button").style.display = "none";
-		document.getElementById("back_button").style.display = "block";
-	}else{
-		document.getElementById("settings_button").style.display = "block";
-		document.getElementById("back_button").style.display = "none";
-	}
-};
-
-var countdown;
-var duration = 0;
-var next_alarm,back_alarm;
+            document.getElementById("group_title").innerHTML = event.target.getAttribute("t");
 
 
-function setDuration(){
-var _date1 = new Date();
-var _date2 = new Date(_date1);
-dyrated = 0;
-for(i = 0;i<alarms.length;i++){
-_date2.setHours(alarms[i][0],alarms[i][1],0);
-if((((_date2-_date1)/1000)-duration) < 300 && (((_date2-_date1)/1000)-duration) > -300){
-save_duration(duration+(((_date2-_date1)/1000)-duration));
-get_alarm();dyrated = 1;
-kalert("Время скорректировано по звонку)<br>Изменено на "+convert_to_time(-duration));
-break;
-}
-}
-if(dyrated == 0)kalert("Время не скорректировано.<br>Эту кнопку нажимать только по звонку.");
-}
+            if (_win !== "all") {
+                document.getElementById("settings_button").style.display = "none";
+                document.getElementById("back_button").style.display = "block";
+            } else {
+                document.getElementById("settings_button").style.display = "block";
+                document.getElementById("back_button").style.display = "none";
+            }
+        };
 
-function save_duration(_duration,_rec){
-		document.getElementById("time_s").innerHTML =convert_to_time(_duration)
-	if(_rec !== "no"){
-		setCookie("duration",_duration,{expires: 604800});
-	}
-	get_alarm();
-	duration = _duration;
-}
-
-function bind(){
-    var d = new Date();
-    var n = d.getDay();
-	if(typeof ts =="undefined")document.body.innerHTML = "<h2>Расписание на эту группу не найдено.<br>Обратитесь к <a href='https://vk.com/dom534412'>администратору.</a><h2>";
-	
-	save_duration(Number(getCookie("duration"))||0,"no")
-	if(n==0){
-	toggle_week_day(document.getElementById("week_days_w0"));
-	}else{
-	toggle_week_day(document.getElementById("week_days_w"+(n-1)));
-	}
-
-	for(var i = 0;i<6;i++){
-	document.getElementById("week_days").cells[i].addEventListener("click",function(e){
-	toggle_week_day(e.target);
-	})
-	}
-	ts[6] = [];
-	
-	for(z = 0;z<alarms.length/2;z++){
-	ts[6][z] = [];
-	ts[6][z][0] = ""+alarms[z*2][0]+":"+alarms[z*2][1]+" - "+alarms[(z*2)+1][0]+":"+alarms[(z*2)+1][1];
-	ts[6][z][1] = "";
-	ts[6][z][2] = "";
-	}
-	get_alarm();do_cd();
-	setInterval('do_cd()', 1000);
-	setInterval('get_alarm();', 5000);
-	setTimeout('document.getElementById("loading_div").style.display = "none";',500);
+        var countdown;
+        var duration = 0;
+        var next_alarm, back_alarm;
 
 
-}
+        function setDuration() {
+            var _date1 = new Date();
+            var _date2 = new Date(_date1);
+            dyrated = 0;
+            for (i = 0; i < alarms.length; i++) {
+                _date2.setHours(alarms[i][0], alarms[i][1], 0);
+                if ((((_date2 - _date1) / 1000) - duration) < 300 && (((_date2 - _date1) / 1000) - duration) > -300) {
+                    save_duration(duration + (((_date2 - _date1) / 1000) - duration));
+                    get_alarm();
+                    dyrated = 1;
+                    kalert("Время скорректировано по звонку)<br>Изменено на " + convert_to_time(-duration));
+                    break;
+                }
+            }
+            if (dyrated == 0) kalert("Время не скорректировано.<br>Эту кнопку нажимать только по звонку.");
+        }
 
-function kalert(_msg){
-	document.getElementById("kalert").innerHTML = _msg;
-	document.getElementById("kalert").style.display = "block";
-	setTimeout('document.getElementById("kalert").style.opacity = 1;',500);
-	setTimeout('document.getElementById("kalert").style.opacity = 0;',3000);
-	setTimeout('document.getElementById("kalert").style.display = "none";',3500);
-}
+        function save_duration(_duration, _rec) {
+            document.getElementById("time_s").innerHTML = convert_to_time(_duration)
+            if (_rec !== "no") {
+                setCookie("duration", _duration, {
+                    expires: 604800
+                });
+            }
+            get_alarm();
+            duration = _duration;
+        }
 
-function toggle_week_day(_obj){
-	if(document.getElementsByClassName("active").length > 0){
-		document.getElementsByClassName("active")[0].className = document.getElementsByClassName("active")[0].className.replace("active"," ");
-	}
-	if(_obj !== null){
-		_obj.className = _obj.className + " active";
+        function bind() {
+            var d = new Date();
+            var n = d.getDay();
+            if (typeof ts == "undefined") document.body.innerHTML =
+                "<h2>Расписание на эту группу не найдено.<br>Обратитесь к <a href='https://vk.com/dom534412'>администратору.</a><h2>";
 
+            save_duration(Number(getCookie("duration")) || 0, "no")
+            if (n == 0) {
+                toggle_week_day(document.getElementById("week_days_w0"));
+            } else {
+                toggle_week_day(document.getElementById("week_days_w" + (n - 1)));
+            }
 
-		if(_obj.getAttribute("w") == "6"){
-		document.getElementsByClassName("lists")[0].rows[1].cells[1].innerHTML = "Звонки";
-		document.getElementsByClassName("lists")[0].rows[1].cells[2].innerHTML = "";
-		}else{
-		document.getElementsByClassName("lists")[0].rows[1].cells[1].innerHTML = "Урок";
-		document.getElementsByClassName("lists")[0].rows[1].cells[2].innerHTML = "Каб";
-		}
+            for (var i = 0; i < 6; i++) {
+                document.getElementById("week_days").cells[i].addEventListener("click", function (e) {
+                    toggle_week_day(e.target);
+                })
+            }
+            ts[6] = [];
 
-	
-		for(l = 0;l<alarms.length/2;l++){            
-			document.getElementsByClassName("lists")[0].rows[l+2].cells[2].innerHTML = ts[_obj.getAttribute("w")][l][2];
-			document.getElementsByClassName("lists")[0].rows[l+2].cells[2].setAttribute("title",ts[_obj.getAttribute("w")][l][1]);
-			document.getElementsByClassName("lists")[0].rows[l+2].cells[1].innerHTML = ts[_obj.getAttribute("w")][l][0];
-		}
-	}
-}
-
-
-function get_alarm(){
-	var date1 = new Date();
-	var date2 = new Date(date1);
-	var week_day = new Date().getDay();
-	if(week_day == 0){
-		document.getElementById('now').style.display = "none";
-	}else{
-		for(i = 0;i<alarms.length;i++){
-		date2.setHours(alarms[i][0],alarms[i][1],0);
-		if(((date2-date1)/1000)-duration > 0){
-		countdown = ((date2-date1)/1000)-duration;
-		document.getElementById('time_next_alarm').innerHTML = (alarms[i] == undefined)?"--:--":(alarms[i][0]+":"+alarms[i][1]);
-		document.getElementById('time_back_alarm').innerHTML = (alarms[i-1] == undefined)?"--:--":(alarms[i-1][0]+":"+alarms[i-1][1]);
-
-
-		if(alarms[i-1] == undefined || alarms[i-1][2] == undefined){
-		document.getElementById('now_l').innerHTML = "Сейчас: Построения";
-		}else{
-		document.getElementById('now_l').innerHTML = (alarms[i-1][2] == "-1")?"Сейчас: Перемена":"Сейчас: "+ts[week_day][alarms[i-1][2]][0]+((ts[week_day][alarms[i-1][2]][2] == "--")?"":" в "+ts[week_day][alarms[i-1][2]][2]+" каб.");
-		}
-
-		if(alarms[i] == undefined || alarms[i][2] == "undefined"){
-		document.getElementById('next_l').innerHTML = "Потом: Домой :3";
-		}else{
-		document.getElementById("next").style.display = "table-row";
-		document.getElementById('next_l').innerHTML = (alarms[i][2] == "-1")?"Потом: "+ts[week_day][alarms[i+1][2]][0]+((ts[week_day][alarms[i+1][2]][1] == "--")?"":" в "+ts[week_day][alarms[i+1][2]][2]+" каб."):"Потом: "+ts[week_day][alarms[i][2]][0]+((ts[week_day][alarms[i][2]][2] == "--")?"":" в "+ts[week_day][alarms[i][2]][2]+" каб.");
-		}
-		break;
-		}
-		}
-}
-}
+            for (z = 0; z < alarms.length / 2; z++) {
+                ts[6][z] = [];
+                ts[6][z][0] = "" + alarms[z * 2][0] + ":" + alarms[z * 2][1] + " - " + alarms[(z * 2) + 1][0] + ":" +
+                    alarms[(z * 2) + 1][1];
+                ts[6][z][1] = "";
+                ts[6][z][2] = "";
+            }
+            get_alarm();
+            do_cd();
+            setInterval('do_cd()', 1000);
+            setInterval('get_alarm();', 5000);
+            setTimeout('document.getElementById("loading_div").style.display = "none";', 500);
 
 
-function do_cd(){
-	if(countdown >= 0 && countdown < 3600){
-		document.getElementById('now').style.display = "table";
-		if (countdown == 0){ 	
-			document.getElementById('time_to_next_alarm').innerHTML = "Звонок ^.^";
-			vibrate(600);
-			document.getElementById('count_time').innerHTML = "^.^";
-			get_alarm();
-		}else{	
-			document.getElementById('time_to_next_alarm').innerHTML = "До звонка: "+convert_to_time(countdown,true);
-			if(countdown < 6)vibrate(150);
-			document.getElementById('count_time').innerHTML = convert_to_time(countdown,true);
-		}	
-		countdown = countdown - 1;
-	}else{
-		document.getElementById('now').style.display = "none";
-	}
-}
+        }
+
+        function kalert(_msg) {
+            document.getElementById("kalert").innerHTML = _msg;
+            document.getElementById("kalert").style.display = "block";
+            setTimeout('document.getElementById("kalert").style.opacity = 1;', 500);
+            setTimeout('document.getElementById("kalert").style.opacity = 0;', 3000);
+            setTimeout('document.getElementById("kalert").style.display = "none";', 3500);
+        }
+
+        function toggle_week_day(_obj) {
+            if (document.getElementsByClassName("active").length > 0) {
+                document.getElementsByClassName("active")[0].className = document.getElementsByClassName("active")[0].className
+                    .replace("active", " ");
+            }
+            if (_obj !== null) {
+                _obj.className = _obj.className + " active";
 
 
+                if (_obj.getAttribute("w") == "6") {
+                    document.getElementsByClassName("lists")[0].rows[1].cells[1].innerHTML = "Звонки";
+                    document.getElementsByClassName("lists")[0].rows[1].cells[2].innerHTML = "";
+                } else {
+                    document.getElementsByClassName("lists")[0].rows[1].cells[1].innerHTML = "Урок";
+                    document.getElementsByClassName("lists")[0].rows[1].cells[2].innerHTML = "Каб";
+                }
 
 
-
-</script>
-<style>
-.top{cursor:default;z-index:2;position:relative;width:100%;min-height:50px;line-height:50px;background:#383840;color:#FFFFFF;font-size:18px;border-bottom:5px solid #212026;text-align:center;}
-.copy{position:fixed;bottom:3px;left:0px;z-index:0;width:100%;color:#383840;text-align:center;}
-
-
-html{background:#212026;color:#FFFFFF;padding:0px 0px;margin:0px;text-align:center;overflow:auto;}
-
-
-body{background:#212026;color:#FFFFFF;padding:0px;margin:0px auto;text-align:center;max-width:380px;
-font-family: tahoma, arial, verdana, sans-serif, 'Lucida Sans';
-font-size: 11px;
-}
-
-td{text-align:center;padding:2px;background:#383840;font-size:17px;height:40px;overflow:hidden;}
-
-#now{
-z-index:2;
-position: relative;
-margin-top:0px;
-background: #212026;
-width: 100%;
-cursor:default;
-text-align:center;
-border-bottom:5px solid #212026;
-}
+                for (l = 0; l < alarms.length / 2; l++) {
+                    document.getElementsByClassName("lists")[0].rows[l + 2].cells[2].innerHTML = ts[_obj.getAttribute(
+                        "w")][l][2];
+                    document.getElementsByClassName("lists")[0].rows[l + 2].cells[2].setAttribute("title", ts[_obj.getAttribute(
+                        "w")][l][1]);
+                    document.getElementsByClassName("lists")[0].rows[l + 2].cells[1].innerHTML = ts[_obj.getAttribute(
+                        "w")][l][0];
+                }
+            }
+        }
 
 
-.help{z-index:2;
-position: relative;
-margin-top:0px;
-background: #383840;
-width: 100%;
-font-size:16px;
-text-align:center;
-border-bottom:5px solid #212026;
-min-height:250px;
-padding:20px;
-box-sizing: border-box;
-}
-
-.lists{z-index:2;
-margin-top:0px;
-position: relative;
-background:;
-width: 100%;
-text-align:center;
-}
-
-.now .time{
-position: relative;
-width: 50px;cursor:default;
-}
+        function get_alarm() {
+            var date1 = new Date();
+            var date2 = new Date(date1);
+            var week_day = new Date().getDay();
+            if (week_day == 0) {
+                document.getElementById('now').style.display = "none";
+            } else {
+                for (i = 0; i < alarms.length; i++) {
+                    date2.setHours(alarms[i][0], alarms[i][1], 0);
+                    if (((date2 - date1) / 1000) - duration > 0) {
+                        countdown = ((date2 - date1) / 1000) - duration;
+                        document.getElementById('time_next_alarm').innerHTML = (alarms[i] == undefined) ? "--:--" : (
+                            alarms[i][0] + ":" + alarms[i][1]);
+                        document.getElementById('time_back_alarm').innerHTML = (alarms[i - 1] == undefined) ? "--:--" :
+                            (alarms[i - 1][0] + ":" + alarms[i - 1][1]);
 
 
-.lists #week_days td{
-border-bottom:5px solid #212026;
-width: 14.28571428571429%;
-cursor:pointer;
-}
+                        if (alarms[i - 1] == undefined || alarms[i - 1][2] == undefined) {
+                            document.getElementById('now_l').innerHTML = "Сейчас: Построения";
+                        } else {
+                            document.getElementById('now_l').innerHTML = (alarms[i - 1][2] == "-1") ?
+                                "Сейчас: Перемена" : "Сейчас: " + ts[week_day][alarms[i - 1][2]][0] + ((ts[week_day][
+                                    alarms[i - 1][2]
+                                ][2] == "--") ? "" : " в " + ts[week_day][alarms[i - 1][2]][2] + " каб.");
+                        }
 
-.lists #week_days .active{
-background: #0094ff;
-}
-
-button{
-background: #0094ff;
-border:none;
-padding:5px;
-font-size:16px;
-color:#FFFFFF;
-min-width:60px;
-margin: 2px;
-}
-
-
-#time_s{
-width:252px;padding:5px;
-height:30px;font-size:16px;
-line-height:30px;
-display:block;
-margin:0 auto;
-}
-
-.button{
-width:50px;
-height:50px;
-position:absolute;
-top:0px;
-background-size: 30px;
-background-repeat: no-repeat;
-background-position: center;
-}
-.button:first-child{background-size: 40px;}
-a{
-color: #0094ff;
-text-decoration:none;
-
-}
-
-
-#kalert{
-	transition: all 0.5s linear;
-	background: #0094ff;
-	z-index:5;
-	position:fixed;
-	left:0%;
-	bottom:0%;
-	margin:;
-	width:100%;
-	height:40px;
-	line-height:20px;
-	font-size:16px;
-	opacity:0;
-	display:none;
-}
-
-
-#loading_div{
-position: fixed; top: 0px; left: 0px; height: 100%; padding: 0px;width: 100%; display: block; font-size: 30px;z-index: 100; color: #383840; background:#212026;line-height: 50px;font-family: monospace;font-size:11px;line-height:11px;text-align:center;
-}
-#loading_div div{
-z-index:100;
-display: block;
-top: 50%;
-left: 50%;
-background:#383840;
-box-shadow:0px 0px 0px 2px #383840;
-transform: rotateZ(0rad);
--webkit-transform: rotateZ(0rad);
-width: 40px;
-height: 40px;
-border: 5px solid #212026;
-position:fixed;
-margin-top:-20px;
-margin-left:-20px;
-border-radius: 100px;
-border-right: 5px solid #0094ff;
-animation:cricle 1s linear 0s infinite;
--webkit-animation:cricle 1s linear 0s infinite;
-}
-@keyframes cricle{
-0%   {transform: rotateZ(0grad);}
-100%   {transform: rotateZ(390grad);}
-}
-@-webkit-keyframes cricle{
-0%   {-webkit-transform: rotateZ(0grad);}
-100%   {-webkit-transform: rotateZ(390grad);}
-}
-</style>	
-	<meta name="msapplication-TileColor" content="#1f2026">
-	<meta name="theme-color" content="#1f2026">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-<style type="text/css">/*.lleo_errorSelection *::-moz-selection,
+                        if (alarms[i] == undefined || alarms[i][2] == "undefined") {
+                            document.getElementById('next_l').innerHTML = "Потом: Домой :3";
+                        } else {
+                            document.getElementById("next").style.display = "table-row";
+                            document.getElementById('next_l').innerHTML = (alarms[i][2] == "-1") ? "Потом: " + ts[
+                                week_day][alarms[i + 1][2]][0] + ((ts[week_day][alarms[i + 1][2]][1] == "--") ? "" :
+                                " в " + ts[week_day][alarms[i + 1][2]][2] + " каб.") : "Потом: " + ts[week_day][
+                                alarms[i][2]
+                            ][0] + ((ts[week_day][alarms[i][2]][2] == "--") ? "" : " в " + ts[week_day][alarms[i][2]]
+                                [2] + " каб.");
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .top {
+            cursor: default;
+            z-index: 2;
+            position: relative;
+            width: 100%;
+            min-height: 50px;
+            line-height: 50px;
+            background: #383840;
+            color: #FFFFFF;
+            font-size: 18px;
+            border-bottom: 5px solid #212026;
+            text-align: center;
+        }
+        
+        .copy {
+            position: fixed;
+            bottom: 3px;
+            left: 0px;
+            z-index: 0;
+            width: 100%;
+            color: #383840;
+            text-align: center;
+        }
+        
+        html {
+            background: #212026;
+            color: #FFFFFF;
+            padding: 0px 0px;
+            margin: 0px;
+            text-align: center;
+            overflow: auto;
+        }
+        
+        body {
+            background: #212026;
+            color: #FFFFFF;
+            padding: 0px;
+            margin: 0px auto;
+            text-align: center;
+            max-width: 380px;
+            font-family: tahoma, arial, verdana, sans-serif, 'Lucida Sans';
+            font-size: 11px;
+        }
+        
+        td {
+            text-align: center;
+            padding: 2px;
+            background: #383840;
+            font-size: 17px;
+            height: 40px;
+            overflow: hidden;
+        }
+        
+        #now {
+            z-index: 2;
+            position: relative;
+            margin-top: 0px;
+            background: #212026;
+            width: 100%;
+            cursor: default;
+            text-align: center;
+            border-bottom: 5px solid #212026;
+        }
+        
+        .help {
+            z-index: 2;
+            position: relative;
+            margin-top: 0px;
+            background: #383840;
+            width: 100%;
+            font-size: 16px;
+            text-align: center;
+            border-bottom: 5px solid #212026;
+            min-height: 250px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .lists {
+            z-index: 2;
+            margin-top: 0px;
+            position: relative;
+            background: ;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .now .time {
+            position: relative;
+            width: 50px;
+            cursor: default;
+        }
+        
+        .lists #week_days td {
+            border-bottom: 5px solid #212026;
+            width: 14.28571428571429%;
+            cursor: pointer;
+        }
+        
+        .lists #week_days .active {
+            background: #0094ff;
+        }
+        
+        button {
+            background: #0094ff;
+            border: none;
+            padding: 5px;
+            font-size: 16px;
+            color: #FFFFFF;
+            min-width: 60px;
+            margin: 2px;
+        }
+        
+        #time_s {
+            width: 252px;
+            padding: 5px;
+            height: 30px;
+            font-size: 16px;
+            line-height: 30px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .button {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0px;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .button:first-child {
+            background-size: 40px;
+        }
+        
+        a {
+            color: #0094ff;
+            text-decoration: none;
+        }
+        
+        #kalert {
+            transition: all 0.5s linear;
+            background: #0094ff;
+            z-index: 5;
+            position: fixed;
+            left: 0%;
+            bottom: 0%;
+            margin: ;
+            width: 100%;
+            height: 40px;
+            line-height: 20px;
+            font-size: 16px;
+            opacity: 0;
+            display: none;
+        }
+        
+        #loading_div {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            padding: 0px;
+            width: 100%;
+            display: block;
+            font-size: 30px;
+            z-index: 100;
+            color: #383840;
+            background: #212026;
+            line-height: 50px;
+            font-family: monospace;
+            font-size: 11px;
+            line-height: 11px;
+            text-align: center;
+        }
+        
+        #loading_div div {
+            z-index: 100;
+            display: block;
+            top: 50%;
+            left: 50%;
+            background: #383840;
+            box-shadow: 0px 0px 0px 2px #383840;
+            transform: rotateZ(0rad);
+            -webkit-transform: rotateZ(0rad);
+            width: 40px;
+            height: 40px;
+            border: 5px solid #212026;
+            position: fixed;
+            margin-top: -20px;
+            margin-left: -20px;
+            border-radius: 100px;
+            border-right: 5px solid #0094ff;
+            animation: cricle 1s linear 0s infinite;
+            -webkit-animation: cricle 1s linear 0s infinite;
+        }
+        
+        @keyframes cricle {
+            0% {
+                transform: rotateZ(0grad);
+            }
+            100% {
+                transform: rotateZ(390grad);
+            }
+        }
+        
+        @-webkit-keyframes cricle {
+            0% {
+                -webkit-transform: rotateZ(0grad);
+            }
+            100% {
+                -webkit-transform: rotateZ(390grad);
+            }
+        }
+    </style>
+    <meta name="msapplication-TileColor" content="#1f2026">
+    <meta name="theme-color" content="#1f2026">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style type="text/css">
+        /*.lleo_errorSelection *::-moz-selection,
 .lleo_errorSelection *::selection,
 .lleo_errorSelection *::-webkit-selection {
     background-color: red !important;
     color: #fff !important;;
 }*/
-
-#lleo_dialog,
-#lleo_dialog * {
-    color: #000 !important;
-    font: normal 13px Arial, Helvetica !important;
-    line-height: 15px !important;
-    margin: 0 !important;
-	padding: 0 !important;
-	background: none !important;
-	border: none 0 !important;
-	position: static !important;
-	vertical-align: baseline !important;
-	overflow: visible !important;
-	width: auto !important;
-	height: auto !important;
-    max-width: none !important;
-    max-height: none !important;
-	float: none !important;
-	visibility: visible !important;
-	text-align: left !important;
-    text-transform: none !important;
-	border-collapse: separate !important;
-	border-spacing: 2px !important;
-    box-sizing: content-box !important;
-    box-shadow: none !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-    letter-spacing: normal !important;
-    -webkit-filter: none !important;
-    -moz-filter: none !important;
-    filter: none !important;
-}
-#lleo_dialog *:before,
-#lleo_dialog *:after {
-    content: '';
-}
-
-#lleo_dialog iframe {
-	height: 0 !important;
-	width: 0 !important;
-}
-
-#lleo_dialog {
-    position: absolute !important;
-    background: #fff !important;
-    border: solid 1px #ccc !important;
-    padding: 7px 0 0 !important;
-    left: -999px;
-    top: -999px;
-    width: 440px !important;
-    overflow: hidden;
-    display: block !important;
-    z-index: 999999999 !important;
-    box-shadow: 8px 16px 30px rgba(0, 0, 0, 0.16) !important;
-    border-radius: 3px !important;
-    opacity: 0 !important;
-    -webkit-transform: translateY(15px);
-    -moz-transform: translateY(15px);
-    -ms-transform: translateY(15px);
-    -o-transform: translateY(15px);
-    transform: translateY(15px);
-}
-#lleo_dialog.lleo_show_small {
-    width: 150px !important;
-}
-#lleo_dialog.lleo_show {
-    opacity: 1 !important;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s !important;
-    -moz-transition: -moz-transform 0.3s, opacity 0.3s !important;
-    -ms-transition: -ms-transform 0.3s, opacity 0.3s !important;
-    -o-transition: -o-transform 0.3s, opacity 0.3s !important;
-    transition: transform 0.3s, opacity 0.3s !important;
-}
-#lleo_dialog.lleo_collapse {
-    opacity: 0 !important;
-    -webkit-transform: scale(0.25, 0.1) translate(-550px, 100px);
-    -moz-transform: scale(0.25, 0.1) translate(-550px, 100px);
-    -ms-transform: scale(0.25, 0.1) translate(-550px, 100px);
-    -o-transform: scale(0.25, 0.1) translate(-550px, 100px);
-    transform: scale(0.25, 0.1) translate(-550px, 100px);
-    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
-    -moz-transition: -moz-transform 0.4s, opacity 0.4s !important;
-    -ms-transition: -ms-transform 0.4s, opacity 0.4s !important;
-    -o-transition: -o-transform 0.4s, opacity 0.4s !important;
-    transition: transform 0.4s, opacity 0.4s !important;
-}
-#lleo_dialog input::-webkit-input-placeholder {
-    color: #aaa !important;
-}
-#lleo_dialog .lleo_has_pic #lleo_word {
-	margin-right: 80px !important;
-}
-#lleo_dialog #lleo_translationsContainer1 {
-	position: relative !important;
-}
-#lleo_dialog #lleo_translationsContainer2 {
-	padding: 7px 0 0 !important;
-	vertical-align: middle !important;
-}
-#lleo_dialog #lleo_word {
-    color: #000 !important;
-    margin: 0 5px 2px 0 !important;
-    /*float: left !important;*/
-}
-#lleo_dialog .lleo_has_sound #lleo_word {
-    margin-left: 30px !important;
-}
-#lleo_dialog #lleo_text {
-    font-weight: bold !important;
-    color: #d56e00 !important;
-    text-decoration: none !important;
-    cursor: default !important;
-}
-/*
+        
+        #lleo_dialog,
+        #lleo_dialog * {
+            color: #000 !important;
+            font: normal 13px Arial, Helvetica !important;
+            line-height: 15px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: none !important;
+            border: none 0 !important;
+            position: static !important;
+            vertical-align: baseline !important;
+            overflow: visible !important;
+            width: auto !important;
+            height: auto !important;
+            max-width: none !important;
+            max-height: none !important;
+            float: none !important;
+            visibility: visible !important;
+            text-align: left !important;
+            text-transform: none !important;
+            border-collapse: separate !important;
+            border-spacing: 2px !important;
+            box-sizing: content-box !important;
+            box-shadow: none !important;
+            opacity: 1 !important;
+            text-shadow: none !important;
+            letter-spacing: normal !important;
+            -webkit-filter: none !important;
+            -moz-filter: none !important;
+            filter: none !important;
+        }
+        
+        #lleo_dialog *:before,
+        #lleo_dialog *:after {
+            content: '';
+        }
+        
+        #lleo_dialog iframe {
+            height: 0 !important;
+            width: 0 !important;
+        }
+        
+        #lleo_dialog {
+            position: absolute !important;
+            background: #fff !important;
+            border: solid 1px #ccc !important;
+            padding: 7px 0 0 !important;
+            left: -999px;
+            top: -999px;
+            width: 440px !important;
+            overflow: hidden;
+            display: block !important;
+            z-index: 999999999 !important;
+            box-shadow: 8px 16px 30px rgba(0, 0, 0, 0.16) !important;
+            border-radius: 3px !important;
+            opacity: 0 !important;
+            -webkit-transform: translateY(15px);
+            -moz-transform: translateY(15px);
+            -ms-transform: translateY(15px);
+            -o-transform: translateY(15px);
+            transform: translateY(15px);
+        }
+        
+        #lleo_dialog.lleo_show_small {
+            width: 150px !important;
+        }
+        
+        #lleo_dialog.lleo_show {
+            opacity: 1 !important;
+            -webkit-transform: translateY(0);
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -o-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-transition: -webkit-transform 0.3s, opacity 0.3s !important;
+            -moz-transition: -moz-transform 0.3s, opacity 0.3s !important;
+            -ms-transition: -ms-transform 0.3s, opacity 0.3s !important;
+            -o-transition: -o-transform 0.3s, opacity 0.3s !important;
+            transition: transform 0.3s, opacity 0.3s !important;
+        }
+        
+        #lleo_dialog.lleo_collapse {
+            opacity: 0 !important;
+            -webkit-transform: scale(0.25, 0.1) translate(-550px, 100px);
+            -moz-transform: scale(0.25, 0.1) translate(-550px, 100px);
+            -ms-transform: scale(0.25, 0.1) translate(-550px, 100px);
+            -o-transform: scale(0.25, 0.1) translate(-550px, 100px);
+            transform: scale(0.25, 0.1) translate(-550px, 100px);
+            -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
+            -moz-transition: -moz-transform 0.4s, opacity 0.4s !important;
+            -ms-transition: -ms-transform 0.4s, opacity 0.4s !important;
+            -o-transition: -o-transform 0.4s, opacity 0.4s !important;
+            transition: transform 0.4s, opacity 0.4s !important;
+        }
+        
+        #lleo_dialog input::-webkit-input-placeholder {
+            color: #aaa !important;
+        }
+        
+        #lleo_dialog .lleo_has_pic #lleo_word {
+            margin-right: 80px !important;
+        }
+        
+        #lleo_dialog #lleo_translationsContainer1 {
+            position: relative !important;
+        }
+        
+        #lleo_dialog #lleo_translationsContainer2 {
+            padding: 7px 0 0 !important;
+            vertical-align: middle !important;
+        }
+        
+        #lleo_dialog #lleo_word {
+            color: #000 !important;
+            margin: 0 5px 2px 0 !important;
+            /*float: left !important;*/
+        }
+        
+        #lleo_dialog .lleo_has_sound #lleo_word {
+            margin-left: 30px !important;
+        }
+        
+        #lleo_dialog #lleo_text {
+            font-weight: bold !important;
+            color: #d56e00 !important;
+            text-decoration: none !important;
+            cursor: default !important;
+        }
+        /*
 #lleo_dialog #lleo_text.lleo_known {
     cursor: pointer !important;
     text-decoration: underline !important;
 }
 */
-/*#lleo_dialog #lleo_closeBtn {
+        /*#lleo_dialog #lleo_closeBtn {
     position: absolute !important;
     right: 6px !important;
     top: 5px !important;
@@ -781,424 +633,461 @@ animation:cricle 1s linear 0s infinite;
 	padding: 0 !important;
 	margin: 0 !important;
 }*/
+        
+        #lleo_dialog #lleo_optionsBtn {
+            position: absolute !important;
+            right: 3px !important;
+            top: 5px !important;
+            line-height: 1px !important;
+            text-decoration: none !important;
+            font-weight: bold !important;
+            font-size: 13px !important;
+            color: #aaa !important;
+            padding: 2px !important;
+            display: none;
+        }
+        
+        #lleo_dialog.lleo_optionsShown #lleo_optionsBtn {
+            display: block !important;
+        }
+        
+        #lleo_dialog #lleo_optionsBtn img {
+            width: 12px !important;
+            height: 12px !important;
+        }
+        
+        #lleo_dialog #lleo_sound {
+            float: left !important;
+            width: 16px !important;
+            height: 16px !important;
+            margin-left: 9px !important;
+            margin-right: 3px !important;
+            background: 0 0 no-repeat !important;
+            cursor: pointer !important;
+            display: none !important;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfNJREFUeNq0U01IVFEU/u57Oo5WhBRIBBptykWLYBa2soWiEKQQEbrSFsGbVRQKQc2iFqGitXqvjQxCoCJCqyI0aBUtZILaJNUuYWYWo8HovJ/707nP94bnz0rxwvfOuefd8517fi5TSuE4i50YwZ3l37ZhNlpgzFkaaM/G9sHF1YskNrT+7l4PjMOcb78t2JL71uxgB+2UlfxHTtq5N94fIOh/88kWgWfl73ZCSQkpeGg3H091JY6dI2S00qA/N3KO3dDUYhFgEmZGurG+w9FqApIHsVM7kaTF9Nhn0r8Q7hPWQgIRuNaH3AMUA4W/Lkdh04cpFS43G0TgxQTvCdMETVAk3KynIHwXZU/ge8XDt7KH9bKLjU0P2zVO5LsEpSejVRJ9UR18EtfqKegovs9R3Q6w9c/H1o4Aa2Jwm1lIvn9RJ4w9RdRRzqcYrpwycCll4Cy1lnkS3Bc6vfBg28v8aRIfI78zhB/1GygROH3jLyyzMQ0zlUZuZBSlKkeLoegGtTjYLcJ8pF+NakHOFC2J6w+f25mxSfWrWFF/ShXVPTGvtN14NNkVnxlYWJkgZEL7/vwKr55lKSVnaGYWkuYgrgG172uUv47+U7fw0EHaJXmalUQy/HqO6lBzEsVjJC4Q8kd6TETQpjuaGOvjv8b/AgwA/ij1XMx58NIAAAAASUVORK5CYII=) !important;
+        }
+        
+        #lleo_dialog .lleo_has_sound #lleo_sound {
+            display: block !important;
+        }
+        
+        #lleo_dialog #lleo_soundWave {
+            border: solid 5px #4495CC !important;
+            border-radius: 5px !important;
+            position: absolute !important;
+            left: -5px !important;
+            top: -5px !important;
+            right: -5px !important;
+            bottom: -5px !important;
+            z-index: 0 !important;
+            opacity: 0.9 !important;
+            display: none !important;
+        }
+        
+        #lleo_dialog #lleo_soundWave.lleo_beforePlaying {
+            display: block !important;
+        }
+        
+        #lleo_dialog #lleo_soundWave.lleo_playing {
+            opacity: 0 !important;
+            border-width: 20px !important;
+            border-radius: 30px !important;
+            -webkit-transform: scale(1.07, 1.1) !important;
+            -moz-transform: scale(1.07, 1.1) !important;
+            -ms-transform: scale(1.07, 1.1) !important;
+            transform: scale(1.07, 1.1) !important;
+            -webkit-transition: all 0.6s !important;
+            -moz-transition: all 0.6s !important;
+            -ms-transition: all 0.6s !important;
+            transition: all 0.6s !important;
+        }
+        
+        #lleo_dialog #lleo_picOuter {
+            position: absolute !important;
+            float: right !important;
+            top: 4px;
+            right: 5px;
+            z-index: 9 !important;
+            display: none !important;
+            width: 100px !important;
+        }
+        
+        #lleo_dialog.lleo_optionsShown #lleo_picOuter {
+            right: 25px;
+        }
+        
+        #lleo_dialog .lleo_has_pic #lleo_picOuter {
+            display: block !important;
+        }
+        
+        #lleo_dialog #lleo_picOuter:hover {
+            width: auto !important;
+            z-index: 11 !important;
+        }
+        
+        #lleo_dialog #lleo_pic,
+        #lleo_dialog #lleo_picBig {
+            position: absolute !important;
+            top: 0 !important;
+            right: 0 !important;
+            border: solid 2px #fff !important;
+            -webkit-border-radius: 2px !important;
+            -moz-border-radius: 2px !important;
+            border-radius: 2px !important;
+            z-index: 1 !important;
+        }
+        
+        #lleo_dialog #lleo_pic {
+            position: relative !important;
+            border: none !important;
+            width: 30px !important;
+        }
+        
+        #lleo_dialog #lleo_picBig {
+            box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.3);
+            z-index: 2 !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+        
+        #lleo_dialog #lleo_picOuter:hover #lleo_picBig {
+            visibility: visible !important;
+            opacity: 1 !important;
+            -webkit-transition: opacity 0.3s !important;
+            -webkit-transition-delay: 0.3s !important;
+        }
+        
+        #lleo_dialog #lleo_transcription {
+            margin: 0 80px 4px 31px !important;
+            color: #aaaaaa !important;
+        }
+        
+        #lleo_dialog .lleo_no_trans {
+            color: #aaa !important;
+        }
+        
+        #lleo_dialog .ll-translation-counter {
+            float: right !important;
+            font-size: 11px !important;
+            color: #aaa !important;
+            padding: 2px 2px 1px 10px !important;
+        }
+        
+        #lleo_dialog .ll-translation-text {
+            float: left !important;
+            /*width: 80% !important;*/
+        }
+        
+        #lleo_dialog #lleo_trans a {
+            color: #3F669F !important;
+            text-decoration: none !important;
+            text-overflow: ellipsis !important;
+            padding: 1px 4px !important;
+            overflow: hidden !important;
+            float: left !important;
+            width: 320px !important;
+        }
+        
+        #lleo_dialog .ll-translation-item {
+            color: #3F669F !important;
+            border: solid 1px #fff !important;
+            padding: 3px !important;
+            width: 100% !important;
+            float: left !important;
+            -moz-border-radius: 2px !important;
+            -webkit-border-radius: 2px !important;
+            border-radius: 2px !important;
+        }
+        
+        #lleo_dialog .ll-translation-item:hover {
+            border: solid 1px #9FC2C9 !important;
+            background: #EDF4F6 !important;
+            cursor: pointer !important;
+        }
+        
+        #lleo_dialog .ll-translation-item:hover .ll-translation-counter {
+            color: #83a0a6 !important;
+        }
+        
+        #lleo_dialog .ll-translation-marker {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAWSURBVBhXY7RPm/+fAQkwIXNAbMICAJQ8AkvqWg/SAAAAAElFTkSuQmCC) !important;
+            display: inline-block !important;
+            width: 4px !important;
+            height: 4px !important;
+            margin: 7px 5px 2px 2px !important;
+            float: left !important;
+        }
+        
+        #lleo_dialog #lleo_icons {
+            color: #aaa !important;
+            font-size: 11px !important;
+            background: #f8f8f8 !important;
+            padding: 10px 10px 10px 16px !important;
+        }
+        
+        #lleo_icons a {
+            display: inline-block !important;
+            width: 16px !important;
+            height: 16px !important;
+            margin: 0 10px -4px 3px !important;
+            text-decoration: none !important;
+            opacity: 0.5 !important;
+            background: url(data:image/png;base64,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) !important;
+        }
+        
+        #lleo_icons a:hover {
+            opacity: 1 !important;
+        }
+        
+        #lleo_icons a.lleo_google {
+            background-position: -34px 0 !important;
+        }
+        
+        #lleo_icons a.lleo_multitran {
+            background-position: -64px 0 !important;
+        }
+        
+        #lleo_icons a.lleo_lingvo {
+            background-position: -51px 0 !important;
+            width: 12px !important;
+        }
+        
+        #lleo_icons a.lleo_dict {
+            background-position: -17px 0 !important;
+        }
+        
+        #lleo_icons a.lleo_linguee {
+            background-position: -81px 0 !important;
+        }
+        
+        #lleo_icons a.lleo_michaelis {
+            background-position: -98px 0 !important;
+        }
+        
+        #lleo_dialog #lleo_contextContainer {
+            margin: 0 !important;
+            padding: 3px 15px 8px 10px !important;
+            background: #eee !important;
+            background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
+            background: -moz-linear-gradient(-90deg, #fff, #eee) !important;
+            border-bottom: solid 1px #ddd !important;
+            border-top-left-radius: 3px !important;
+            border-top-right-radius: 3px !important;
+            display: none !important;
+            overflow: hidden !important;
+        }
+        
+        #lleo_dialog .lleo_has_context #lleo_contextContainer {
+            display: block !important;
+        }
+        
+        #lleo_dialog #lleo_context {
+            color: #444 !important;
+            text-shadow: 1px 1px 0 #f4f4f4 !important;
+            line-height: 12px !important;
+            font-size: 11px !important;
+            margin-left: 2px !important;
+        }
+        
+        #lleo_dialog #lleo_context b {
+            line-height: 12px !important;
+            color: #000 !important;
+            font-weight: bold !important;
+            font-size: 11px !important;
+        }
+        
+        #lleo_dialog #lleo_translateContextLink {
+            color: #444 !important;
+            text-shadow: 1px 1px 0 #f4f4f4 !important;
+            background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
+            background: -moz-linear-gradient(-90deg, #f4f4f4, #ddd) !important;
+            border: solid 1px !important;
+            box-shadow: 1px 1px 0 #f6f6f6 !important;
+            border-color: #999 #aaa #aaa #999 !important;
+            -moz-border-radius: 2px !important;
+            -webkit-border-radius: 2px !important;
+            border-radius: 2px !important;
+            padding: 0 3px !important;
+            font-size: 11px !important;
+            text-decoration: none !important;
+            margin: 1px 5px 0 !important;
+            display: inline-block !important;
+            white-space: nowrap !important;
+        }
+        
+        #lleo_dialog #lleo_translateContextLink:hover {
+            background: #f8f8f8 !important;
+        }
+        
+        #lleo_dialog #lleo_translateContextLink.hidden {
+            visibility: hidden !important;
+        }
+        
+        #lleo_dialog #lleo_setTransForm {
+            display: block !important;
+            margin-top: 3px !important;
+            padding-top: 5px !important;
+            /* Set position and background because the form might be overlapped by an image when no translations */
+            position: relative !important;
+            background: #fff !important;
+            z-index: 10 !important;
+            padding-bottom: 10px !important;
+            padding-left: 16px !important;
+        }
+        
+        #lleo_dialog .lleo-custom-translation {
+            padding: 4px 5px !important;
+            border: solid 1px #ddd !important;
+            border-radius: 2px !important;
+            width: 90% !important;
+            min-width: 270px !important;
+            background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
+            background: -moz-linear-gradient(-90deg, #f1f1f1, #fff) !important;
+            font: normal 13px Arial, Helvetica !important;
+            line-height: 15px !important;
+        }
+        
+        #lleo_dialog .lleo-custom-translation:hover {
+            border: solid 1px #aaa !important;
+        }
+        
+        #lleo_dialog .lleo-custom-translation:focus {
+            background: #FFFEC9 !important;
+        }
+        
+        #lleo_dialog *.hidden {
+            display: none !important;
+        }
+        
+        #lleo_dialog .infinitive {
+            color: #D56E00 !important;
+            text-decoration: none;
+            border-bottom: 1px dotted #D56E00 !important;
+        }
+        
+        #lleo_dialog .infinitive:hover {
+            border: none !important;
+        }
+        
+        #lleo_dialog .lleo_separator {
+            height: 1px !important;
+            background: #eee;
+            margin-top: 10px !important;
+            background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, #eee 8%, rgba(255, 255, 255, 1) 80%) !important;
+            background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, #eee 8%, rgba(255, 255, 255, 1) 80%) !important;
+            background: -ms-linear-gradient(left, rgba(255, 255, 255, 1) 0%, #eee 8%, rgba(255, 255, 255, 1) 80%) !important;
+            background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, #eee 8%, rgba(255, 255, 255, 1) 80%) !important;
+        }
+        
+        #lleo_dialog #lleo_trans {
+            /*border-top: 1px solid #eeeeee !important;*/
+            padding: 5px 30px 0 14px !important;
+            zoom: 1;
+        }
+        
+        #lleo_dialog .lleo_clearfix {
+            display: block !important;
+            clear: both !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            font-size: 0 !important;
+        }
+        
+        #lleo_dialog #lleo_picOuter table {
+            width: 44px !important;
+            position: absolute !important;
+            right: 0 !important;
+            top: 0 !important;
+            vertical-align: middle !important;
+        }
+        
+        #lleo_dialog #lleo_picOuter td {
+            width: 38px !important;
+            height: 38px !important;
+            /*border: 1px solid #eeeeee !important;*/
+            vertical-align: middle !important;
+            text-align: center !important;
+        }
+        
+        #lleo_dialog #lleo_picOuter td div {
+            height: 38px !important;
+            overflow: hidden !important;
+        }
+        
+        #lleo_dialog .lleo_empty {
+            margin: 0 5px 7px !important;
+        }
+        
+        #lleo_youtubeExportBtn {
+            margin-left: 10px;
+            height: 24px;
+        }
+        
+        #lleo_youtubeExportBtn i {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: 0 0 url(https://d144fqpiyasmrr.cloudfront.net/plugins/all/images/i16.png) !important;
+        }
+        
+        #lleo_youtubeExportBtn .yt-uix-button-content {
+            font-size: 12px;
+            line-height: 2px;
+        }
+        /*** Parsed Lyrics Content *****************************/
+        
+        .lleo_lyrics tran {
+            background: transparent !important;
+            border-radius: 2px !important;
+            text-shadow: none !important;
+            cursor: pointer !important;
+        }
+        
+        .lleo_lyrics tran:hover {
+            color: #fff !important;
+            background: #C77213 !important;
+            -webkit-transition: all 0.1s !important;
+            -moz-transition: all 0.1s !important;
+            -ms-transition: all 0.1s !important;
+            -o-transition: all 0.1s !important;
+            transition: all 0.1s !important;
+        }
+        
+        .lleo_songName {
+            border: solid 1px #ffd47c;
+            background: #fff1c2;
+            border-radius: 2px;
+        }
+        
+        .lleo_hidden_iframe {
+            visibility: hidden;
+        }
+    </style>
+</head>
 
-#lleo_dialog #lleo_optionsBtn {
-    position: absolute !important; 
-    right: 3px !important;
-    top: 5px !important;
-    line-height: 1px !important;
-    text-decoration: none !important;
-    font-weight: bold !important;
-    font-size: 13px !important;
-    color: #aaa !important;
-    padding: 2px !important;
-	display: none;
-}
-    #lleo_dialog.lleo_optionsShown #lleo_optionsBtn {
-        display: block !important;
-    }
-    #lleo_dialog #lleo_optionsBtn img {
-        width: 12px !important;
-        height: 12px !important;
-    }
-#lleo_dialog #lleo_sound {
-    float: left !important;
-    width: 16px !important;
-    height: 16px !important;
-    margin-left: 9px !important;
-    margin-right: 3px !important;
-    background: 0 0 no-repeat !important;
-    cursor: pointer !important;
-    display: none !important;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfNJREFUeNq0U01IVFEU/u57Oo5WhBRIBBptykWLYBa2soWiEKQQEbrSFsGbVRQKQc2iFqGitXqvjQxCoCJCqyI0aBUtZILaJNUuYWYWo8HovJ/707nP94bnz0rxwvfOuefd8517fi5TSuE4i50YwZ3l37ZhNlpgzFkaaM/G9sHF1YskNrT+7l4PjMOcb78t2JL71uxgB+2UlfxHTtq5N94fIOh/88kWgWfl73ZCSQkpeGg3H091JY6dI2S00qA/N3KO3dDUYhFgEmZGurG+w9FqApIHsVM7kaTF9Nhn0r8Q7hPWQgIRuNaH3AMUA4W/Lkdh04cpFS43G0TgxQTvCdMETVAk3KynIHwXZU/ge8XDt7KH9bKLjU0P2zVO5LsEpSejVRJ9UR18EtfqKegovs9R3Q6w9c/H1o4Aa2Jwm1lIvn9RJ4w9RdRRzqcYrpwycCll4Cy1lnkS3Bc6vfBg28v8aRIfI78zhB/1GygROH3jLyyzMQ0zlUZuZBSlKkeLoegGtTjYLcJ8pF+NakHOFC2J6w+f25mxSfWrWFF/ShXVPTGvtN14NNkVnxlYWJkgZEL7/vwKr55lKSVnaGYWkuYgrgG172uUv47+U7fw0EHaJXmalUQy/HqO6lBzEsVjJC4Q8kd6TETQpjuaGOvjv8b/AgwA/ij1XMx58NIAAAAASUVORK5CYII=) !important;
-}
-#lleo_dialog .lleo_has_sound #lleo_sound {
-    display: block !important;
-}
-
-#lleo_dialog #lleo_soundWave {
-    border: solid 5px #4495CC !important;
-    border-radius: 5px !important;
-    position: absolute !important;
-    left: -5px !important;
-    top: -5px !important;
-    right: -5px !important;
-    bottom: -5px !important;
-    z-index: 0 !important;
-    opacity: 0.9 !important;
-    display: none !important;
-}
-    #lleo_dialog #lleo_soundWave.lleo_beforePlaying {
-        display: block !important;
-    }
-    #lleo_dialog #lleo_soundWave.lleo_playing {
-        opacity: 0 !important;
-        border-width: 20px !important;
-        border-radius: 30px !important;
-
-        -webkit-transform: scale(1.07,1.1) !important;
-        -moz-transform: scale(1.07,1.1) !important;
-        -ms-transform: scale(1.07,1.1) !important;
-        transform: scale(1.07,1.1) !important;
-
-        -webkit-transition: all 0.6s !important;
-        -moz-transition: all 0.6s !important;
-        -ms-transition: all 0.6s !important;
-        transition: all 0.6s !important;
-    }
-
-
-#lleo_dialog #lleo_picOuter {
-    position: absolute !important;
-    float: right !important;
-    top: 4px;
-    right: 5px;
-    z-index: 9 !important;
-    display: none !important;
-    width: 100px !important;
-}
-    #lleo_dialog.lleo_optionsShown #lleo_picOuter {
-        right: 25px;
-    }
-#lleo_dialog .lleo_has_pic #lleo_picOuter {
-    display: block !important;
-}
-    #lleo_dialog #lleo_picOuter:hover {
-        width: auto !important;
-        z-index: 11 !important;
-    }
-#lleo_dialog #lleo_pic,
-#lleo_dialog #lleo_picBig {
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    border: solid 2px #fff !important;
-    -webkit-border-radius: 2px !important;
-    -moz-border-radius: 2px !important;
-	border-radius: 2px !important;
-    z-index: 1 !important;
-}
-#lleo_dialog #lleo_pic {
-	position: relative !important;
-    border: none !important;
-	width: 30px !important;
-}
-#lleo_dialog #lleo_picBig {
-    box-shadow: -1px 2px 4px rgba(0,0,0,0.3);
-    z-index: 2 !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-}
-    #lleo_dialog #lleo_picOuter:hover #lleo_picBig {
-        visibility: visible !important;
-        opacity: 1 !important;
-        -webkit-transition: opacity 0.3s !important;
-        -webkit-transition-delay: 0.3s !important;
-    }
-#lleo_dialog #lleo_transcription {
-    margin: 0 80px 4px 31px !important;
-    color: #aaaaaa !important;
-}
-#lleo_dialog .lleo_no_trans {
-    color: #aaa !important;
-}
-
-#lleo_dialog .ll-translation-counter {
-	float: right !important;
-    font-size: 11px !important;
-    color: #aaa !important;
-    padding: 2px 2px 1px 10px !important;
-}
-
-#lleo_dialog .ll-translation-text {
-	float: left !important;
-	/*width: 80% !important;*/
-}
-
-#lleo_dialog #lleo_trans a {
-    color: #3F669F !important;
-    text-decoration: none !important;
-    text-overflow: ellipsis !important;
-    padding: 1px 4px !important;
-    overflow: hidden !important;
-    float: left !important;
-    width: 320px !important;
-}
-
-#lleo_dialog .ll-translation-item {
-    color: #3F669F !important;
-    border: solid 1px #fff !important;
-    padding: 3px !important;
-    width: 100% !important;
-    float: left !important;
-	-moz-border-radius: 2px !important;
-	-webkit-border-radius: 2px !important;
-	border-radius: 2px !important;
-}
-
-#lleo_dialog .ll-translation-item:hover {
-	border: solid 1px #9FC2C9 !important;
-    background: #EDF4F6 !important;
-	cursor: pointer !important;
-}
-#lleo_dialog .ll-translation-item:hover .ll-translation-counter {
-	color: #83a0a6 !important;
-}
-
-#lleo_dialog .ll-translation-marker {
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAWSURBVBhXY7RPm/+fAQkwIXNAbMICAJQ8AkvqWg/SAAAAAElFTkSuQmCC) !important;
-    display: inline-block !important;
-    width: 4px !important;
-    height: 4px !important;
-    margin: 7px 5px 2px 2px !important;
-    float: left !important;
-}
-
-#lleo_dialog #lleo_icons {
-    color: #aaa !important;
-    font-size: 11px !important;
-    background: #f8f8f8 !important;
-    padding: 10px 10px 10px 16px !important;
-}
-#lleo_icons a {
-    display: inline-block !important;
-    width: 16px !important;
-    height: 16px !important;
-    margin: 0 10px -4px 3px !important;
-    text-decoration: none !important;
-    opacity: 0.5 !important;
-    background: url(data:image/png;base64,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) !important;
-}
-#lleo_icons a:hover {
-    opacity: 1 !important;
-}
-#lleo_icons a.lleo_google     {background-position:-34px 0 !important;}
-#lleo_icons a.lleo_multitran  {background-position:-64px 0 !important;}
-#lleo_icons a.lleo_lingvo     {background-position:-51px 0 !important; width: 12px !important;}
-#lleo_icons a.lleo_dict       {background-position:-17px 0 !important;}
-#lleo_icons a.lleo_linguee    {background-position:-81px 0 !important;}
-#lleo_icons a.lleo_michaelis  {background-position:-98px 0 !important;}
-
-#lleo_dialog #lleo_contextContainer {
-    margin: 0 !important;
-    padding: 3px 15px 8px 10px !important;
-    background: #eee !important;
-    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
-    background: -moz-linear-gradient(-90deg, #fff, #eee) !important;
-    border-bottom: solid 1px #ddd !important;
-    border-top-left-radius: 3px !important;
-    border-top-right-radius: 3px !important;
-    display: none !important;
-    overflow: hidden !important;
-}
-#lleo_dialog .lleo_has_context #lleo_contextContainer {
-    display: block !important;
-}
-#lleo_dialog #lleo_context {
-    color: #444 !important;
-    text-shadow: 1px 1px 0 #f4f4f4 !important;
-    line-height: 12px !important;
-    font-size: 11px !important;
-    margin-left: 2px !important;
-}
-#lleo_dialog #lleo_context b {
-    line-height: 12px !important;
-    color: #000 !important;
-    font-weight: bold !important;
-    font-size: 11px !important;
-}
-/*#lleo_dialog #lleo_gBrand {
-    color: #aaa !important;
-    font-size: 10px !important;
-    *//*padding-right: 52px !important;*//*
-    padding-bottom: 14px !important;
-    margin: -3px 4px 0 4px !important;
-    background: left bottom url(data:image/png;base64,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) no-repeat !important;
-    display: inline-block !important;
-    float: right !important;
-}
-#lleo_dialog #lleo_gBrand.hidden {
-    display: none !important;
-}*/
-#lleo_dialog #lleo_translateContextLink {
-    color: #444 !important;
-    text-shadow: 1px 1px 0 #f4f4f4 !important;
-    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
-    background: -moz-linear-gradient(-90deg, #f4f4f4, #ddd) !important;
-    border: solid 1px !important;
-    box-shadow: 1px 1px 0 #f6f6f6 !important;
-    border-color: #999 #aaa #aaa #999 !important;
-    -moz-border-radius: 2px !important;
-	-webkit-border-radius: 2px !important;
-	border-radius: 2px !important;
-    padding: 0 3px !important;
-    font-size: 11px !important;
-    text-decoration: none !important;
-    margin: 1px 5px 0 !important;
-    display: inline-block !important;
-    white-space: nowrap !important;
-}
-#lleo_dialog #lleo_translateContextLink:hover {
-    background: #f8f8f8 !important;
-}
-#lleo_dialog #lleo_translateContextLink.hidden {
-    visibility: hidden !important;
-}
-
-#lleo_dialog #lleo_setTransForm {
-    display: block !important;
-    margin-top: 3px !important;
-    padding-top: 5px !important;
-    /* Set position and background because the form might be overlapped by an image when no translations */
-    position: relative !important;
-    background: #fff !important;
-    z-index: 10 !important;
-    padding-bottom: 10px !important;
-    padding-left: 16px !important;
-}
-#lleo_dialog .lleo-custom-translation {
-    padding: 4px 5px !important;
-    border: solid 1px #ddd !important;
-	border-radius: 2px !important;
-    width: 90% !important;
-    min-width: 270px !important;
-    background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
-    background: -moz-linear-gradient(-90deg, #f1f1f1, #fff) !important;
-	font: normal 13px Arial, Helvetica !important;
-	line-height: 15px !important;
-}
-#lleo_dialog .lleo-custom-translation:hover {
-    border: solid 1px #aaa !important;
-}
-#lleo_dialog .lleo-custom-translation:focus {
-    background: #FFFEC9 !important;
-}
-
-#lleo_dialog *.hidden {
-    display: none !important;
-}
-
-#lleo_dialog .infinitive{
-    color: #D56E00 !important;
-    text-decoration: none;
-    border-bottom: 1px dotted #D56E00 !important;
-}
-#lleo_dialog .infinitive:hover{
-    border: none !important;
-}
-
-#lleo_dialog .lleo_separator {
-    height: 1px !important;
-    background: #eee;
-    margin-top: 10px !important;
-    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
-    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, #eee 8%, rgba(255,255,255,1) 80%) !important;
-    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
-    background: linear-gradient(to right, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
-}
-#lleo_dialog #lleo_trans {
-    /*border-top: 1px solid #eeeeee !important;*/
-    padding: 5px 30px 0 14px !important;
-    zoom: 1;
-}
-
-#lleo_dialog .lleo_clearfix {
-	display: block !important;
-	clear: both !important;
-	visibility: hidden !important;
-	height: 0 !important;
-	font-size: 0 !important;
-}
-
-
-#lleo_dialog #lleo_picOuter table {
-    width: 44px !important;
-    position: absolute !important;
-    right: 0 !important;
-    top: 0 !important;
-    vertical-align: middle !important;
-}
-
-#lleo_dialog #lleo_picOuter td {
-    width: 38px !important;
-    height: 38px !important;
-    /*border: 1px solid #eeeeee !important;*/
-    vertical-align: middle !important;
-    text-align: center !important;
-}
-
-#lleo_dialog #lleo_picOuter td div {
-	height: 38px !important;
-	overflow: hidden !important;
-}
-
-#lleo_dialog .lleo_empty {
-    margin: 0 5px 7px !important;
-}
-
-#lleo_youtubeExportBtn {
-    margin-left: 10px;
-    height: 24px;
-}
-    #lleo_youtubeExportBtn i {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        background: 0 0 url(https://d144fqpiyasmrr.cloudfront.net/plugins/all/images/i16.png) !important;
-    }
-    #lleo_youtubeExportBtn .yt-uix-button-content {
-        font-size: 12px;
-        line-height: 2px;
-    }
-
-
-/*** Parsed Lyrics Content *****************************/
-
-.lleo_lyrics tran {
-    background: transparent !important;
-    border-radius: 2px !important;
-    text-shadow: none !important;
-    cursor: pointer !important;
-}
-    .lleo_lyrics tran:hover {
-        color: #fff !important;
-        background: #C77213 !important;
-        -webkit-transition: all 0.1s !important;
-        -moz-transition: all 0.1s !important;
-        -ms-transition: all 0.1s !important;
-        -o-transition: all 0.1s !important;
-        transition: all 0.1s !important;
-    }
-
-.lleo_songName {
-    border: solid 1px #ffd47c;
-    background: #fff1c2;
-    border-radius: 2px;
-}
-
-.lleo_hidden_iframe {
-    visibility: hidden;
-}</style></head>
 <body onload="bind();">
-<div id="loading_div" style="display: none;"><div></div><span style="top:50%;left:0px;width:100%;position:fixed;margin-top:40px;" id="loading_div_text">загрузка приложения</span></div>
-<div class="top"><a class="button" href="#" id="help_button" style="background-image:url(&quot;//k-94.ru/assets/logo.svg&quot;);left:0px;"></a><div class="button" id="back_button" t="Расписание  группы" onclick="show('all');" style="background-image:url(&quot;https://blacksharp.github.io/%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5_files/close.png&quot;);right:0px;display:none;"></div><span id="group_title"> Расписание  группы </span><div class="button" onclick="show('settings');" id="settings_button" t="Настройки" style="display:none;"></div></div>
- <span id="body_timer" style="display:none;">
+    <div id="loading_div" style="display: none;">
+        <span style="top:50%;left:0px;width:100%;position:fixed;margin-top:40px;" id="loading_div_text">загрузка приложения</span></div>
+    <div class="top">
+        <a class="button" href="#" id="help_button" style="background-image:url(&quot;//blacksharp.github.io/Расписание_files/logo.svg&quot;);left:0px;"></a>
+        <div class="button" id="back_button" t="Расписание  группы" onclick="show('all');" style="background-image:url(&quot;https://blacksharp.github.io/Расписание_files/close.png&quot;);right:0px;display:none;"></div><span id="group_title"> Расписание  группы </span>
+    </div>
+    <span id="body_timer" style="display:none;">
 	<div class="help" id="count_time" style="font-size: 130px;line-height: 385px;background: #212026;text-shadow:0px 0px 10px #000;">
 	00:00
  	</div>
 </span>
-<span id="body_settings" class="help" style="display:none;">
-
+    <span id="body_settings" class="help" style="display:none;">
 		<br><br><button style="width:252px;" onclick="setDuration();">По звонку</button><br>
 		<button onclick="save_duration(duration - 3600);">-60:00</button><button onclick="save_duration(duration - 60);">-01:00</button><button onclick="save_duration(duration - 10);">-00:10</button><button onclick="save_duration(duration - 1);">-00:01</button>
 		<span id="time_s">+00:00</span>
-		<button onclick="save_duration(duration + 3600);">+60:00</button><button onclick="save_duration(duration + 60);">+01:00</button><button onclick="save_duration(duration + 10);">+00:10</button><button onclick="save_duration(duration + 1);">+00:01</button><br><button style="width:252px;" onclick="save_duration(0);">Сброс</button><br><br>
-		<hr>
-		
-</span>
-
-
-<span id="body_all" style="display:block">
+    <button onclick="save_duration(duration + 3600);">+60:00</button><button onclick="save_duration(duration + 60);">+01:00</button><button
+        onclick="save_duration(duration + 10);">+00:10</button><button onclick="save_duration(duration + 1);">+00:01</button><br><button
+        style="width:252px;" onclick="save_duration(0);">Сброс</button><br><br>
+    <hr>
+    </span>
+    <span id="body_all" style="display:block">
 	<table id="now" style="display: none;" cellspacing="0" cellpadding="0" border="0">
 		<tbody><tr><td colspan="3" id="now_l">Сейчас: </td></tr>
 		<tr id="next"><td colspan="3" id="next_l">Cледующий урок:</td></tr>
@@ -1224,7 +1113,8 @@ animation:cricle 1s linear 0s infinite;
 <tr><td>8</td><td colspan="4">МДК 01.01 Осн.экспл.тех   обслуж.и ремонта СЭУ</td><td onclick="kalert(this.title);" title="Плотников А.В.">54</td></tr>
 </tbody></table>
 </span>
-<div class="copy"> <a href="https://blacksharp.github.io/%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5.htm" style="color: inherit;text-decoration: underline;">Blak</a> © 2017 г.</div>
-<div id="kalert"></div>
+    <div class="copy"> <a href="https://blacksharp.github.io/%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5.htm" style="color: inherit;text-decoration: underline;">Black</a>        © 2017 г.</div>
+    <div id="kalert"></div>
+</body>
 
-</body></html>
+</html>
