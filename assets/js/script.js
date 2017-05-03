@@ -1,7 +1,7 @@
 $(function(){
 	
 	var note = $('#note'),
-		ts = new Date(2017, 5, 23),
+		ts = new Date(2017, 4, 23),
 		newYear = false;
 	
 	
