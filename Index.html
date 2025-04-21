@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Анализ CSV данных</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .stats { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
+    .stat-block { flex: 1 1 300px; border: 1px solid #ccc; padding: 10px; border-radius: 5px; }
+    canvas { width: 100% !important; height: 400px !important; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h2>Загрузите CSV-файл</h2>
+  <input type="file" id="csvFile" accept=".csv" />
+
+  <div class="stats" id="statsContainer"></div>
+
+  <canvas id="chart"></canvas>
+
+  <script>
+    document.getElementById('csvFile').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const text = event.target.result.trim();
+        const lines = text.split('\n');
+        const headers = lines[0].split(',');
+
+        const data = lines.slice(1).map(line => {
+          const values = line.split(',');
+          const entry = {};
+          headers.forEach((header, index) => {
+            entry[header] = values[index];
+          });
+          return entry;
+        });
+
+        displayStats(data);
+        drawChart(data);
+      };
+      reader.readAsText(file);
+    });
+
+    function displayStats(data) {
+      const statsContainer = document.getElementById('statsContainer');
+      statsContainer.innerHTML = '';
+
+      const start = data[0];
+      const end = data[data.length - 1];
+
+      const fields = ['speed', 'power', 'current', 'voltage', 'battery_level', 'system_temp'];
+
+      const stats = fields.map(field => {
+        const values = data.map(d => parseFloat(d[field])).filter(v => !isNaN(v));
+        return {
+          field,
+          max: Math.max(...values).toFixed(2),
+          min: Math.min(...values).toFixed(2),
+          avg: (values.reduce((a, b) => a + b, 0) / values.length).toFixed(2),
+          median: median(values).toFixed(2)
+        };
+      });
+
+      const statBlock = document.createElement('div');
+      statBlock.className = 'stat-block';
+      statBlock.innerHTML = `
+        <h3>Start</h3>
+        <p>Date: ${start.date} ${start.time}</p>
+        <p>Mileage: ${start.totaldistance}</p>
+        <h3>Finish</h3>
+        <p>Date: ${end.date} ${end.time}</p>
+        <p>Mileage: ${end.totaldistance}</p>
+      `;
+      statsContainer.appendChild(statBlock);
+
+      stats.forEach(stat => {
+        const block = document.createElement('div');
+        block.className = 'stat-block';
+        block.innerHTML = `
+          <h3>${stat.field.charAt(0).toUpperCase() + stat.field.slice(1)}</h3>
+          <p>Max: ${stat.max}</p>
+          <p>Min: ${stat.min}</p>
+          <p>Avg: ${stat.avg}</p>
+          <p>Median: ${stat.median}</p>
+        `;
+        statsContainer.appendChild(block);
+      });
+    }
+
+    function median(values) {
+      values.sort((a, b) => a - b);
+      const mid = Math.floor(values.length / 2);
+      return values.length % 2 !== 0 ? values[mid] : (values[mid - 1] + values[mid]) / 2;
+    }
+
+    function drawChart(data) {
+      const labels = data.map(d => `${d.date} ${d.time}`);
+      const datasets = [
+        { label: 'Speed', data: data.map(d => parseFloat(d.speed)), borderColor: 'blue' },
+        { label: 'Power', data: data.map(d => parseFloat(d.power)), borderColor: 'green' },
+        { label: 'Current', data: data.map(d => parseFloat(d.current)), borderColor: 'red' },
+        { label: 'Voltage', data: data.map(d => parseFloat(d.voltage)), borderColor: 'orange' },
+        { label: 'Battery Level', data: data.map(d => parseFloat(d.battery_level)), borderColor: 'purple' },
+        { label: 'System Temp', data: data.map(d => parseFloat(d.system_temp)), borderColor: 'brown' }
+      ];
+
+      const ctx = document.getElementById('chart').getContext('2d');
+      if (window.myChart) window.myChart.destroy();
+
+      window.myChart = new Chart(ctx, {
+        type: 'line',
+        data: { labels, datasets },
+        options: {
+          responsive: true,
+          interaction: {
+            mode: 'index',
+            intersect: false,
+          },
+          stacked: false,
+          plugins: {
+            title: {
+              display: true,
+              text: 'Параметры заезда'
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
