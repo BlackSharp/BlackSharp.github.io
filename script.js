@@ -56,25 +56,38 @@ function renderChart(data) {
   const timeLabels = data.map(d => `${d.date} ${d.time}`);
   const parseField = (field) => data.map(d => parseFloat(d[field]) || 0);
 
+  function normalize(values) {
+    const min = Math.min(...values);
+    const max = Math.max(...values);
+    return values.map(v => (v - min) / (max - min));
+  }
+
   const traces = [
-    { y: parseField('speed'), name: 'Speed (km/h)' },
-    { y: parseField('power'), name: 'Power (W)' },
-    { y: parseField('current'), name: 'Current (A)' },
-    { y: parseField('voltage'), name: 'Voltage (V)' },
-    { y: parseField('battery_level'), name: 'Battery (%)' },
-    { y: parseField('system_temp'), name: 'Temperature (°C)' }
-  ].map(trace => ({
-    x: timeLabels,
-    y: trace.y,
-    type: 'scattergl',
-    mode: 'lines',
-    name: trace.name
-  }));
+    { field: 'speed', name: 'Speed (km/h)' },
+    { field: 'power', name: 'Power (W)' },
+    { field: 'current', name: 'Current (A)' },
+    { field: 'voltage', name: 'Voltage (V)' },
+    { field: 'battery_level', name: 'Battery (%)' },
+    { field: 'system_temp', name: 'Temperature (°C)' }
+  ].map(trace => {
+    const raw = parseField(trace.field);
+    return {
+      x: timeLabels,
+      y: normalize(raw),
+      text: raw.map(v => `${v.toFixed(1)} ${trace.name.split(' ')[1]}`),
+      hovertemplate: `${trace.name}: %{text}<extra></extra>`,
+      type: 'scattergl',
+      mode: 'lines',
+      name: trace.name
+    };
+  });
 
   Plotly.newPlot('chart', traces, {
     margin: { t: 30 },
     xaxis: { title: 'Time', automargin: true },
-    yaxis: { title: 'Value', automargin: true },
-    legend: { orientation: 'h' }
+    yaxis: { title: 'Normalized', automargin: true },
+    legend: { orientation: 'h' },
+    hovermode: 'x unified'
   }, { responsive: true });
 }
+
