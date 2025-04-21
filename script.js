@@ -37,19 +37,23 @@ function renderSummary(data) {
     };
   }
 
-  const statsHtml = `
-    <div class="stat-block"><h3>${distance.toFixed(1)} km<br>in ${durationStr}</h3></div>
-    <div class="stat-block"><h3>START</h3><p>${startTime.format('D MMMM YYYY HH:mm')}</p><p>${(parseNumber(start.totaldistance) / 1000).toFixed(1)} km</p></div>
-    <div class="stat-block"><h3>FINISH</h3><p>${endTime.format('D MMMM YYYY HH:mm')}</p><p>${(parseNumber(end.totaldistance) / 1000).toFixed(1)} km</p></div>
-    <div class="stat-block"><h3>SPEED</h3><p>Max: ${getStats('speed', ' km/h').max}</p><p>Avg: ${getStats('speed', ' km/h').avg}</p><p>Median: ${getStats('speed', ' km/h').median}</p></div>
-    <div class="stat-block"><h3>POWER</h3><p>Max: ${getStats('power', ' W').max}</p><p>Avg: ${getStats('power', ' W').avg}</p><p>Median: ${getStats('power', ' W').median}</p></div>
-    <div class="stat-block"><h3>CURRENT</h3><p>Max: ${getStats('current', ' A').max}</p><p>Avg: ${getStats('current', ' A').avg}</p><p>Median: ${getStats('current', ' A').median}</p></div>
-    <div class="stat-block"><h3>VOLTAGE</h3><p>Max: ${getStats('voltage', ' V').max}</p><p>Min: ${getStats('voltage', ' V').min}</p><p>Avg: ${getStats('voltage', ' V').avg}</p><p>Median: ${getStats('voltage', ' V').median}</p></div>
-    <div class="stat-block"><h3>BATTERY</h3><p>Max: ${getStats('battery_level', ' %').max}</p><p>Min: ${getStats('battery_level', ' %').min}</p><p>Avg: ${getStats('battery_level', ' %').avg}</p><p>Median: ${getStats('battery_level', ' %').median}</p></div>
-    <div class="stat-block"><h3>TEMPERATURE</h3><p>Max: ${getStats('system_temp', ' °C').max}</p><p>Min: ${getStats('system_temp', ' °C').min}</p><p>Avg: ${getStats('system_temp', ' °C').avg}</p><p>Median: ${getStats('system_temp', ' °C').median}</p></div>
+  const summaryHtml = `
+    <div class="summary-container">
+      <p>${distance.toFixed(1)} km<br>in ${durationStr}</p>
+    </div>
+    <div class="stats-container">
+      <div class="stat-block"><h3>START</h3><p>DATE: ${startTime.format('D MMMM YYYY HH:mm')}</p><p>MILEAGE: ${(parseNumber(start.totaldistance) / 1000).toFixed(1)} km</p></div>
+      <div class="stat-block"><h3>FINISH</h3><p>DATE: ${endTime.format('D MMMM YYYY HH:mm')}</p><p>MILEAGE: ${(parseNumber(end.totaldistance) / 1000).toFixed(1)} km</p></div>
+      <div class="stat-block"><h3>SPEED</h3><p>Max: ${getStats('speed', ' km/h').max}</p><p>Avg: ${getStats('speed', ' km/h').avg}</p><p>Median: ${getStats('speed', ' km/h').median}</p></div>
+      <div class="stat-block"><h3>POWER</h3><p>Max: ${getStats('power', ' W').max}</p><p>Avg: ${getStats('power', ' W').avg}</p><p>Median: ${getStats('power', ' W').median}</p></div>
+      <div class="stat-block"><h3>CURRENT</h3><p>Max: ${getStats('current', ' A').max}</p><p>Avg: ${getStats('current', ' A').avg}</p><p>Median: ${getStats('current', ' A').median}</p></div>
+      <div class="stat-block"><h3>VOLTAGE</h3><p>Max: ${getStats('voltage', ' V').max}</p><p>Min: ${getStats('voltage', ' V').min}</p><p>Avg: ${getStats('voltage', ' V').avg}</p><p>Median: ${getStats('voltage', ' V').median}</p></div>
+      <div class="stat-block"><h3>BATTERY</h3><p>Max: ${getStats('battery_level', ' %').max}</p><p>Min: ${getStats('battery_level', ' %').min}</p><p>Avg: ${getStats('battery_level', ' %').avg}</p><p>Median: ${getStats('battery_level', ' %').median}</p></div>
+      <div class="stat-block"><h3>TEMPERATURE</h3><p>Max: ${getStats('system_temp', ' °C').max}</p><p>Min: ${getStats('system_temp', ' °C').min}</p><p>Avg: ${getStats('system_temp', ' °C').avg}</p><p>Median: ${getStats('system_temp', ' °C').median}</p></div>
+    </div>
   `;
 
-  $('#summary').html(statsHtml);
+  $('#summary').html(summaryHtml);
 }
 
 function renderChart(data) {
@@ -90,4 +94,3 @@ function renderChart(data) {
     hovermode: 'x unified'
   }, { responsive: true });
 }
-
