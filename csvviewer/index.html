@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Анализ поездки</title>
+
+  <!-- Подключение внешних библиотек -->
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" defer></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
+
+  <!-- Подключение стилей -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <header>
+    <h1>Анализ поездки</h1>
+    <p></p>
+  </header>
+
+  <!-- Форма для загрузки CSV файла -->
+  <section id="upload-section">
+    <input type="file" id="csvFile" accept=".csv" aria-label="Загрузить CSV файл" />
+  </section>
+
+  <!-- Контейнер для отображения общей информации -->
+  <section id="summary">
+    <div class="summary-container" id="summary-line"></div>
+    <div class="stats-container" id="summary-stats"></div>
+  </section>
+
+  <!-- Контейнер для отображения графика -->
+  <section id="chart-container">
+    <div id="chart"></div>
+  </section>
+
+  <!-- Контейнер для карты -->
+  <section id="map-container">
+    <div id="map"></div>
+  </section>
+
+  <!-- Подключение основного скрипта -->
+  <script src="script.js" defer></script>
+
+</body>
+</html>
