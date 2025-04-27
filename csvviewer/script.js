@@ -79,10 +79,10 @@ function renderSummary(data) {
   }
 
   const distance = (parseNumber(end.totaldistance) - parseNumber(start.totaldistance)) / 1000;
-  const startTime = moment(`${start.date} ${start.time}`);
-  const endTime = moment(`${end.date} ${end.time}`);
-  const duration = moment.duration(endTime.diff(startTime));
-  const durationStr = `${duration.hours()} hours ${duration.minutes()} minutes ${duration.seconds()} seconds`;
+  const startTime = dayjs(`${start.date} ${start.time}`);
+  const endTime = dayjs(`${end.date} ${end.time}`);
+  const duration = endTime.diff(startTime, 'seconds');
+  const durationStr = `${Math.floor(duration / 3600)} hours ${Math.floor((duration % 3600) / 60)} minutes ${duration % 60} seconds`;
 
   // Функция для получения статистики по различным полям
   function getStats(field, suffix = '', factor = 1) {
@@ -175,30 +175,23 @@ function generateStatBlock(title, stats) {
 // Функция для отображения графика
 function renderChart(data) {
   const timeLabels = data.map(d => `${d.date} ${d.time}`);
-  const parseField = (field) => data.map(d => parseFloat(d[field]) || 0);
+  const parseField = field => data.map(d => parseFloat(d[field]) || 0);
 
-  const traces = generateChartTraces(timeLabels, parseField);
-  Plotly.newPlot('chart', traces, {
-    margin: { t: 30 },
-    xaxis: { title: 'Time', automargin: true },
-    yaxis: { title: 'Normalized', automargin: true },
-    legend: { orientation: 'h' },
-    hovermode: 'x unified'
-  }, { responsive: true });
+  function normalize(arr) {
+    const min = Math.min(...arr);
+    const max = Math.max(...arr);
+    return arr.map(v => (v - min) / (max - min));
+  }
 
-  addChartHoverEvent();
-}
-
-// Функция для генерации следов графика
-function generateChartTraces(timeLabels, parseField) {
-  return [
-    { field: 'speed', name: 'Speed (km/h)' },
-    { field: 'power', name: 'Power (W)' },
-    { field: 'current', name: 'Current (A)' },
-    { field: 'voltage', name: 'Voltage (V)' },
-    { field: 'battery_level', name: 'Battery (%)' },
-    { field: 'system_temp', name: 'Temperature (°C)' },
-    { field: 'pwm', name: 'PWM (%)' }
+  const traces = [
+    {field: 'speed', name: 'Speed (km/h)', color: '#1f77b4'},   // Синий
+    {field: 'gps_speed', name: 'GPS Speed (km/h)', color: '#ff7f0e', visible: 'legendonly'}, // Оранжевый
+    {field: 'power', name: 'Power (W)', color: '#2ca02c'},     // Зеленый
+    {field: 'current', name: 'Current (A)', color: '#d62728'},  // Красный
+    {field: 'voltage', name: 'Voltage (V)', color: '#9467bd'},  // Пурпурный
+    {field: 'battery_level', name: 'Battery (%)', color: '#8c564b'},  // Коричневый
+    {field: 'system_temp', name: 'Temperature (°C)', color: '#e377c2'}, // Розовый
+    {field: 'pwm', name: 'PWM (%)', color: '#17becf'}          // Бирюзовый
   ].map(trace => {
     const raw = parseField(trace.field);
     return {
@@ -208,28 +201,36 @@ function generateChartTraces(timeLabels, parseField) {
       hovertemplate: `${trace.name}: %{text}<extra></extra>`,
       type: 'scattergl',
       mode: 'lines',
-      name: trace.name
+      name: trace.name,
+      line: {
+        color: trace.color // Устанавливаем цвет для каждой линии
+      }
     };
   });
-}
+  
+  // Удаляем старый listener перед новой отрисовкой (чтобы не дублировать)
+  if (window.chartDiv && window.chartDiv.removeAllListeners) {
+    window.chartDiv.removeAllListeners('plotly_hover');
+  }
 
-// Нормализация значений для графика
-function normalize(values) {
-  const min = Math.min(...values);
-  const max = Math.max(...values);
-  if (max - min === 0) return values.map(() => 0);
-  return values.map(v => (v - min) / (max - min));
-}
+  window.chartDiv = document.getElementById('chart');
+  Plotly.newPlot(
+    window.chartDiv,
+    traces,
+    {
+      margin: {t: 30},
+      xaxis: {title: 'Time', automargin: true},
+      yaxis: {title: 'Normalized', automargin: true},
+      legend: {orientation: 'h'},
+      hovermode: 'x unified'
+    },
+    {responsive: true}
+  );
 
-// Слушатель события для обновления карты при наведении на график
-function addChartHoverEvent() {
-  document.getElementById('chart').addEventListener('plotly_hover', function (event) {
-    if (!window.marker || !window.latlngs) return;
-    const pointIndex = event.points[0].pointIndex;
-    const coords = window.latlngs[pointIndex];
-    if (coords) {
-      window.marker.setLatLng(coords);
-    }
+  // Вешаем hover-событие для обновления маркера на карте
+  window.chartDiv.on('plotly_hover', function (event) {
+    const idx = event.points[0].pointIndex;
+    updateMapMarker(data[idx].latitude, data[idx].longitude);
   });
 }
 
@@ -255,6 +256,7 @@ function renderMap(data) {
     return;
   }
 
+  window.latlngs = latlngs;
   initializeMap(latlngs);
 }
 
@@ -262,14 +264,20 @@ function renderMap(data) {
 function initializeMap(latlngs) {
   const map = L.map('map').setView(latlngs[0], 13);
   window.mapInstance = map;
-  window.latlngs = latlngs;
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
-  const polyline = L.polyline(latlngs, { color: 'blue' }).addTo(map);
+  const polyline = L.polyline(latlngs, {color: 'blue'}).addTo(map);
   map.fitBounds(polyline.getBounds());
 
   window.marker = L.marker(latlngs[0]).addTo(map);
+}
+
+// Функция для обновления маркера на карте
+function updateMapMarker(lat, lon) {
+  if (!window.marker) return;
+  window.marker.setLatLng([+lat, +lon]);
+  window.mapInstance.panTo([+lat, +lon]);
 }
